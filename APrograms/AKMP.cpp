@@ -50,3 +50,5 @@ int main(){
 }    
     return 0;
 }
+// Print OK if the pattern is in the text, NOT OK if it is not.
+// Time complexity: O(n+m)

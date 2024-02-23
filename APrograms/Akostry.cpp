@@ -61,11 +61,7 @@ int main() {
     }
     cout << minCena << " " << maxCena << endl;
 
-
-
-    
-
-
-
     return 0;
 }
+// Print the minimum and maximum cost of connecting all vertices.
+// Time complexity: O(m*log(m))

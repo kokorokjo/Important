@@ -62,3 +62,5 @@ int main(){
     printList(head);
     return 0;
 }
+// linked list
+// Time complexity: O(n)

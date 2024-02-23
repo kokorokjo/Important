@@ -40,8 +40,6 @@ int main(){
     a--;b--;
     dijkstra_s_haldou(a);
     cout<<V[b]<<endl;
-
-        
-
-
 }
+// Print the length of the shortest path from the first vertex to the second vertex. If there is no path, print -1.
+// Time complexity: O(n*log(n)+m)

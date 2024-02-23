@@ -72,3 +72,5 @@ int main() {
 
     return 0;
 }
+// Merge sort
+// Time complexity: O(n*log(n))

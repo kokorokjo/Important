@@ -42,3 +42,5 @@ int main(){
     }
     return 0;
 }
+// Print the numbers of the vertices that are not reachable from the first vertex.
+// Time complexity: O(n+m)

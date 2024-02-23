@@ -1,4 +1,3 @@
-
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -20,3 +19,4 @@ int main() {
     printCombinations("", n, k);
     return 0;
 }
+//Print ot every combinations of words with length "n" and chars form a to "k"

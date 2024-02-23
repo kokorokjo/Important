@@ -22,7 +22,7 @@ void printTree(Node* root){
 }
 
 
-void Insert(Node** root,int data){
+void Insert(Node* root,int data){
     if(root==nullptr){
         root=createNode(data);
     }
@@ -50,7 +50,7 @@ bool Search(Node* root, int data){
 
 int main(){
     Node* root = createNode(0);
-    Insert(&root,1);
+    Insert(root,1);
     
 
     printTree(root);
@@ -65,3 +65,4 @@ int main(){
     }
 
 }
+// Tree crated with the help of the structure Node.
