@@ -20,17 +20,19 @@ void dfs(int Z)
 
 int main(){
     cin>>n;
-    for(int i=0; i<n; i++)
+    // n is the number of vertices
+    sused.resize(n);
+    cerveny.resize(n);
+    int m;
+    cin>>m;
+    // m is the number of edges
+    for(int i=0; i<m; i++)
     {
-        int pocet;
-        cin>>pocet;
-        for(int j=0; j<pocet; j++)
-        {
-            int Sused;
-            cin>>Sused;
-            Sused--;
-            sused[i].push_back(Sused);
-        }
+        int a,b;
+        cin>>a>>b;
+        sused[a-1].push_back(b-1);
+        sused[b-1].push_back(a-1);
+
     }
     dfs(0);
     for(int i=0; i<n; i++)

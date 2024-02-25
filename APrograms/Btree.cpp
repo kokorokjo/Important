@@ -2,6 +2,8 @@
 #include <vector>
 using namespace std;
 
+// interval tree in class by KSP
+
 class intervalovy_strom 
 {
     class vrchol
