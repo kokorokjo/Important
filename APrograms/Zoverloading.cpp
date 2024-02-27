@@ -1,68 +1,78 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
-class Box {
-   public:
-      double getVolume(void) {
-         return length * breadth * height;
-      }
-      void setLength( double len ) {
-         length = len;
-      }
-      void setBreadth( double bre ) {
-         breadth = bre;
-      }
-      void setHeight( double hei ) {
-         height = hei;
-      }
-      
-      
-      // Overload + operator to add two Box objects.
-      Box operator+(const Box& b) {
-         Box box;
-         box.length = this->length + b.length;
-         box.breadth = this->breadth + b.breadth;
-         box.height = this->height + b.height;
-         return box;
-      }
-      
-   private:
-      double length;      // Length of a box
-      double breadth;     // Breadth of a box
-      double height;      // Height of a box
+// Consider an actual class.
+class Obj {
+   static int i, j;
+   
+public:
+   void f() const { cout << i++ << endl; }
+   void g() const { cout << j++ << endl; }
 };
 
-// Main function for the program
+// Static member definitions:
+int Obj::i = 10;
+int Obj::j = 12;
+
+// Implement a container for the above class
+class ObjContainer {
+   vector<Obj*> a;
+
+   public:
+      void add(Obj* obj) { 
+         a.push_back(obj);  // call vector's standard method.
+      }
+      friend class SmartPointer;
+};
+
+// implement smart pointer to access member of Obj class.
+class SmartPointer {
+   ObjContainer oc;
+   int index;
+   
+   public:
+      SmartPointer(ObjContainer& objc) { 
+         oc = objc;
+         index = 0;
+      }
+   
+      // Return value indicates end of list:
+      bool operator++() { // Prefix version 
+         if(index >= oc.a.size()) return false;
+         if(oc.a[++index] == 0) return false;
+         return true;
+      }
+   
+      bool operator++(int) { // Postfix version 
+         return operator++();
+      }
+   
+      // overload operator->
+      Obj* operator->() const {
+         if(!oc.a[index]) {
+            cout << "Zero value";
+            return (Obj*)0;
+         }
+      
+         return oc.a[index];
+      }
+};
+
 int main() {
-   Box Box1;                // Declare Box1 of type Box
-   Box Box2;                // Declare Box2 of type Box
-   Box Box3;                // Declare Box3 of type Box
-   double volume = 0.0;     // Store the volume of a box here
- 
-   // box 1 specification
-   Box1.setLength(6.0); 
-   Box1.setBreadth(7.0); 
-   Box1.setHeight(5.0);
- 
-   // box 2 specification
-   Box2.setLength(12.0); 
-   Box2.setBreadth(13.0); 
-   Box2.setHeight(10.0);
- 
-   // volume of box 1
-   volume = Box1.getVolume();
-   cout << "Volume of Box1 : " << volume <<endl;
- 
-   // volume of box 2
-   volume = Box2.getVolume();
-   cout << "Volume of Box2 : " << volume <<endl;
-
-   // Add two object as follows:
-   Box3 = Box1 + Box2;
-
-   // volume of box 3
-   volume = Box3.getVolume();
-   cout << "Volume of Box3 : " << volume <<endl;
-
+   const int sz = 10;
+   Obj o[sz];
+   ObjContainer oc;
+   
+   for(int i = 0; i < sz; i++) {
+      oc.add(&o[i]);
+   }
+   
+   SmartPointer sp(oc); // Create an iterator
+   do {
+      sp->f(); // smart pointer call
+      sp->g();
+   } while(sp++);
+   
    return 0;
 }

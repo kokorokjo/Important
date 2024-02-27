@@ -28,10 +28,21 @@ class Box {
          box.height = this->height + b.height;
          return box;
       }// Overload + operator to add two Box objects.
+      
       Box operator-(){
          length = -length;
          return *this;
-      }
+      } //overloading unary operator
+
+      friend ostream &operator<<( ostream &output, const Box &D ) { 
+         output << "Breadth : " << D.breadth;
+         return output;            
+      } //overloading << operator
+
+      friend istream &operator>>( istream  &input, Box &D ) { 
+         input >> D.breadth;
+         return input;            
+      } //overloading >> operator
 
 
    private:
@@ -47,6 +58,8 @@ class Rectangle: public Box {
          return (width); 
       }
 };
+
+
 
 Box::Box(double len): length(len) {
    cout << "Object is being created" << endl;
