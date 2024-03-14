@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/sounds">
+        <file>7-Secret Oktober 31st.mp3</file>
+        <file>1-Nightboat.mp3</file>
+        <file>2-Black Moonlight.mp3</file>
+        <file>3-Love Voudou.mp3</file>
+        <file>4-Bury A Friend.mp3</file>
+        <file>5-Supernature.mp3</file>
+        <file>6-Danse Macabre.mp3</file>
+    </qresource>
+    <qresource prefix="/pictures">
+        <file>../../../Duran_Duran_-_Danse_Macabre.png</file>
+    </qresource>
+</RCC>
