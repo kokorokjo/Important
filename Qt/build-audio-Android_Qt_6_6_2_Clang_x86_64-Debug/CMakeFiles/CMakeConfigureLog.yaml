@@ -1,0 +1,443 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/CMakeDetermineSystem.cmake:199 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The target system is: Android - 23 - x86_64
+      The host system is: Windows - 6.2.9200 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe 
+      Build flags: -DQT_QML_DEBUG
+      Id flags: -c;--target=x86_64-none-linux-android23 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+      
+      The CXX compiler identification is Clang, found in:
+        C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.o
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-prxy10"
+      binary: "C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-prxy10"
+    cmakeVariables:
+      ANDROID_ABI: "x86_64"
+      ANDROID_ARM_MODE: "thumb"
+      ANDROID_ARM_NEON: "TRUE"
+      ANDROID_PLATFORM: "android-23"
+      ANDROID_STL: "c++_shared"
+      ANDROID_TOOLCHAIN: "clang"
+      ANDROID_USE_LEGACY_TOOLCHAIN_FILE: "OFF"
+      CMAKE_ANDROID_STL_TYPE: "c++_shared"
+      CMAKE_CXX_COMPILER_EXTERNAL_TOOLCHAIN: ""
+      CMAKE_CXX_COMPILER_TARGET: "x86_64-none-linux-android23"
+      CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG   -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -fexceptions -frtti -stdlib=libc++"
+      CMAKE_C_COMPILER_TARGET: "x86_64-none-linux-android23"
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--gc-sections -Qunused-arguments -Wl,--no-undefined  -Wl,--gc-sections"
+      CMAKE_POSITION_INDEPENDENT_CODE: "TRUE"
+      CMAKE_SYSROOT: "C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-prxy10
+        
+        Run Build Command(s):C:/Strawberry/c/bin/ninja.exe -v cmTC_fa89d && [1/2] C:\\Users\\marti\\AppData\\Local\\Android\\Sdk\\ndk\\25.1.8937393\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=x86_64-none-linux-android23 --sysroot=C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -DQT_QML_DEBUG   -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -fexceptions -frtti -stdlib=libc++  -O2 -g -DNDEBUG -fPIE -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_fa89d.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles\\cmTC_fa89d.dir\\CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_fa89d.dir/CMakeCXXCompilerABI.cpp.o -c C:/Strawberry/c/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp
+        Android (8490178, based on r450784d) clang version 14.0.6 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)
+        Target: x86_64-none-linux-android23
+        Thread model: posix
+        InstalledDir: C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin
+         (in-process)
+         "C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe" -cc1 -triple x86_64-none-linux-android23 -emit-obj --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=none -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -target-feature +sse4.2 -target-feature +popcnt -target-feature +cx16 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-prxy10 -resource-dir C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6 -dependency-file "CMakeFiles\\\\cmTC_fa89d.dir\\\\CMakeCXXCompilerABI.cpp.o.d" -MT CMakeFiles/cmTC_fa89d.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -D QT_QML_DEBUG -D ANDROID -D _FORTIFY_SOURCE=2 -D NDEBUG -isysroot C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -internal-isystem C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1 -internal-isystem C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/include -internal-isystem C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include -internal-externc-isystem C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/x86_64-linux-android -internal-externc-isystem C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include -internal-externc-isystem C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include -O2 -Wformat -fdeprecated-macro -fdebug-compilation-dir=C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-prxy10 -ferror-limit 19 -stack-protector 2 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fcolor-diagnostics -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_fa89d.dir/CMakeCXXCompilerABI.cpp.o -x c++ C:/Strawberry/c/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 14.0.6 based upon LLVM 14.0.6git default target x86_64-w64-windows-gnu
+        ignoring nonexistent directory "C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1
+         C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/include
+         C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include
+         C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/x86_64-linux-android
+         C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include\x0d
+        End of search list.\x0d
+        [2/2] cmd.exe /C "cd . && C:\\Users\\marti\\AppData\\Local\\Android\\Sdk\\ndk\\25.1.8937393\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=x86_64-none-linux-android23 --sysroot=C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DQT_QML_DEBUG   -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -fexceptions -frtti -stdlib=libc++  -O2 -g -DNDEBUG -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--gc-sections -Qunused-arguments -Wl,--no-undefined  -Wl,--gc-sections -v CMakeFiles/cmTC_fa89d.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_fa89d  -latomic -lm && cd ."
+        Android (8490178, based on r450784d) clang version 14.0.6 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)
+        Target: x86_64-none-linux-android23
+        Thread model: posix
+        InstalledDir: C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin
+         "C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin/ld" --sysroot=C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -pie --warn-shared-textrel -z now -z relro --hash-style=gnu --enable-new-dtags --eh-frame-hdr -m elf_x86_64 -dynamic-linker /system/bin/linker64 -o cmTC_fa89d C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/23/crtbegin_dynamic.o -LC:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/x86_64 -LC:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/23 -LC:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android -LC:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib --build-id=sha1 --no-rosegment --fatal-warnings --gc-sections --no-undefined --gc-sections CMakeFiles/cmTC_fa89d.dir/CMakeCXXCompilerABI.cpp.o -latomic -lm -lc++ -lm C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-x86_64-android.a -l:libunwind.a -ldl -lc C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-x86_64-android.a -l:libunwind.a -ldl C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/23/crtend_android.o\x0d
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1]
+          add: [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/include]
+          add: [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include]
+          add: [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/x86_64-linux-android]
+          add: [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include]
+        end of search list found
+        collapse include dir [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1] ==> [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1]
+        collapse include dir [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/include] ==> [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/include]
+        collapse include dir [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include] ==> [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include]
+        collapse include dir [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/x86_64-linux-android] ==> [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/x86_64-linux-android]
+        collapse include dir [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include] ==> [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include]
+        implicit include dirs: [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1;C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/include;C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include;C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/x86_64-linux-android;C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld\\.lld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-prxy10]
+        ignore line: []
+        ignore line: [Run Build Command(s):C:/Strawberry/c/bin/ninja.exe -v cmTC_fa89d && [1/2] C:\\Users\\marti\\AppData\\Local\\Android\\Sdk\\ndk\\25.1.8937393\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=x86_64-none-linux-android23 --sysroot=C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -DQT_QML_DEBUG   -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -fexceptions -frtti -stdlib=libc++  -O2 -g -DNDEBUG -fPIE -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_fa89d.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles\\cmTC_fa89d.dir\\CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_fa89d.dir/CMakeCXXCompilerABI.cpp.o -c C:/Strawberry/c/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Android (8490178  based on r450784d) clang version 14.0.6 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)]
+        ignore line: [Target: x86_64-none-linux-android23]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin]
+        ignore line: [ (in-process)]
+        ignore line: [ "C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe" -cc1 -triple x86_64-none-linux-android23 -emit-obj --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=none -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -target-feature +sse4.2 -target-feature +popcnt -target-feature +cx16 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-prxy10 -resource-dir C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6 -dependency-file "CMakeFiles\\\\cmTC_fa89d.dir\\\\CMakeCXXCompilerABI.cpp.o.d" -MT CMakeFiles/cmTC_fa89d.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -D QT_QML_DEBUG -D ANDROID -D _FORTIFY_SOURCE=2 -D NDEBUG -isysroot C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -internal-isystem C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1 -internal-isystem C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/include -internal-isystem C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include -internal-externc-isystem C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/x86_64-linux-android -internal-externc-isystem C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include -internal-externc-isystem C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include -O2 -Wformat -fdeprecated-macro -fdebug-compilation-dir=C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-prxy10 -ferror-limit 19 -stack-protector 2 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fcolor-diagnostics -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_fa89d.dir/CMakeCXXCompilerABI.cpp.o -x c++ C:/Strawberry/c/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang -cc1 version 14.0.6 based upon LLVM 14.0.6git default target x86_64-w64-windows-gnu]
+        ignore line: [ignoring nonexistent directory "C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1]
+        ignore line: [ C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/include]
+        ignore line: [ C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include]
+        ignore line: [ C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/x86_64-linux-android]
+        ignore line: [ C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include\x0d]
+        ignore line: [End of search list.\x0d]
+        ignore line: [[2/2] cmd.exe /C "cd . && C:\\Users\\marti\\AppData\\Local\\Android\\Sdk\\ndk\\25.1.8937393\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=x86_64-none-linux-android23 --sysroot=C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DQT_QML_DEBUG   -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -fexceptions -frtti -stdlib=libc++  -O2 -g -DNDEBUG -Wl --build-id=sha1 -Wl --no-rosegment -Wl --fatal-warnings -Wl --gc-sections -Qunused-arguments -Wl --no-undefined  -Wl --gc-sections -v CMakeFiles/cmTC_fa89d.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_fa89d  -latomic -lm && cd ."]
+        ignore line: [Android (8490178  based on r450784d) clang version 14.0.6 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)]
+        ignore line: [Target: x86_64-none-linux-android23]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin]
+        link line: [ "C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin/ld" --sysroot=C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -pie --warn-shared-textrel -z now -z relro --hash-style=gnu --enable-new-dtags --eh-frame-hdr -m elf_x86_64 -dynamic-linker /system/bin/linker64 -o cmTC_fa89d C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/23/crtbegin_dynamic.o -LC:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/x86_64 -LC:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/23 -LC:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android -LC:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib --build-id=sha1 --no-rosegment --fatal-warnings --gc-sections --no-undefined --gc-sections CMakeFiles/cmTC_fa89d.dir/CMakeCXXCompilerABI.cpp.o -latomic -lm -lc++ -lm C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-x86_64-android.a -l:libunwind.a -ldl -lc C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-x86_64-android.a -l:libunwind.a -ldl C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/23/crtend_android.o\x0d]
+          arg [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin/ld] ==> ignore
+          arg [--sysroot=C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot] ==> ignore
+          arg [-pie] ==> ignore
+          arg [--warn-shared-textrel] ==> ignore
+          arg [-znow] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--enable-new-dtags] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/system/bin/linker64] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_fa89d] ==> ignore
+          arg [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/23/crtbegin_dynamic.o] ==> obj [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/23/crtbegin_dynamic.o]
+          arg [-LC:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/x86_64] ==> dir [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/x86_64]
+          arg [-LC:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/23] ==> dir [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/23]
+          arg [-LC:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android] ==> dir [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android]
+          arg [-LC:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib] ==> dir [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib]
+          arg [--build-id=sha1] ==> ignore
+          arg [--no-rosegment] ==> ignore
+          arg [--fatal-warnings] ==> ignore
+          arg [--gc-sections] ==> ignore
+          arg [--no-undefined] ==> ignore
+          arg [--gc-sections] ==> ignore
+          arg [CMakeFiles/cmTC_fa89d.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-latomic] ==> lib [atomic]
+          arg [-lm] ==> lib [m]
+          arg [-lc++] ==> lib [c++]
+          arg [-lm] ==> lib [m]
+          arg [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-x86_64-android.a] ==> lib [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-x86_64-android.a]
+          arg [-l:libunwind.a] ==> lib [-l:libunwind.a]
+          arg [-ldl] ==> lib [dl]
+          arg [-lc] ==> lib [c]
+          arg [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-x86_64-android.a] ==> lib [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-x86_64-android.a]
+          arg [-l:libunwind.a] ==> lib [-l:libunwind.a]
+          arg [-ldl] ==> lib [dl]
+          arg [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/23/crtend_android.o] ==> obj [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/23/crtend_android.o]
+        remove lib [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-x86_64-android.a]
+        remove lib [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-x86_64-android.a]
+        collapse library dir [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/x86_64] ==> [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/x86_64]
+        collapse library dir [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/23] ==> [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/23]
+        collapse library dir [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android] ==> [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android]
+        collapse library dir [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib] ==> [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib]
+        implicit libs: [atomic;m;c++;m;-l:libunwind.a;dl;c;-l:libunwind.a;dl]
+        implicit objs: [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/23/crtbegin_dynamic.o;C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/23/crtend_android.o]
+        implicit dirs: [C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/x86_64;C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/23;C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android;C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/CheckCXXSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/FindThreads.cmake:99 (CHECK_CXX_SOURCE_COMPILES)"
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/Qt6Dependencies.cmake:24 (_qt_internal_find_third_party_dependencies)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/Qt6Config.cmake:119 (include)"
+      - "CMakeLists.txt:12 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-ba7kz3"
+      binary: "C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-ba7kz3"
+    cmakeVariables:
+      ANDROID_ABI: "x86_64"
+      ANDROID_ARM_MODE: "thumb"
+      ANDROID_ARM_NEON: "TRUE"
+      ANDROID_PLATFORM: "android-23"
+      ANDROID_STL: "c++_shared"
+      ANDROID_TOOLCHAIN: "clang"
+      ANDROID_USE_LEGACY_TOOLCHAIN_FILE: "OFF"
+      CMAKE_ANDROID_STL_TYPE: "c++_shared"
+      CMAKE_CXX_COMPILER_EXTERNAL_TOOLCHAIN: ""
+      CMAKE_CXX_COMPILER_TARGET: "x86_64-none-linux-android23"
+      CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG   -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++"
+      CMAKE_CXX_FLAGS_DEBUG: "-g  -fno-limit-debug-info"
+      CMAKE_C_COMPILER_TARGET: "x86_64-none-linux-android23"
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--gc-sections -Qunused-arguments -Wl,--no-undefined  -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6;C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/3rdparty/kwin"
+      CMAKE_POSITION_INDEPENDENT_CODE: "TRUE"
+      CMAKE_SYSROOT: "C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-ba7kz3
+        
+        Run Build Command(s):C:/Strawberry/c/bin/ninja.exe -v cmTC_d2022 && [1/2] C:\\Users\\marti\\AppData\\Local\\Android\\Sdk\\ndk\\25.1.8937393\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=x86_64-none-linux-android23 --sysroot=C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DCMAKE_HAVE_LIBC_PTHREAD  -DQT_QML_DEBUG   -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++  -O2 -g -DNDEBUG -std=gnu++17 -fPIE -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_d2022.dir/src.cxx.o -MF CMakeFiles\\cmTC_d2022.dir\\src.cxx.o.d -o CMakeFiles/cmTC_d2022.dir/src.cxx.o -c C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-ba7kz3/src.cxx
+        \x1b[31mFAILED: \x1b[0mCMakeFiles/cmTC_d2022.dir/src.cxx.o 
+        C:\\Users\\marti\\AppData\\Local\\Android\\Sdk\\ndk\\25.1.8937393\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=x86_64-none-linux-android23 --sysroot=C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DCMAKE_HAVE_LIBC_PTHREAD  -DQT_QML_DEBUG   -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++  -O2 -g -DNDEBUG -std=gnu++17 -fPIE -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_d2022.dir/src.cxx.o -MF CMakeFiles\\cmTC_d2022.dir\\src.cxx.o.d -o CMakeFiles/cmTC_d2022.dir/src.cxx.o -c C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-ba7kz3/src.cxx
+        C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-ba7kz3/src.cxx:13:3: error: use of undeclared identifier 'pthread_cancel'\x0d
+          pthread_cancel(thread);\x0d
+          ^\x0d
+        1 error generated.\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/FindThreads.cmake:136 (try_compile)"
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/FindThreads.cmake:169 (_threads_check_flag_pthread)"
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/Qt6Dependencies.cmake:24 (_qt_internal_find_third_party_dependencies)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/Qt6Config.cmake:119 (include)"
+      - "CMakeLists.txt:12 (find_package)"
+    checks:
+      - "Check if compiler accepts -pthread"
+    directories:
+      source: "C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-r7x8rx"
+      binary: "C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-r7x8rx"
+    cmakeVariables:
+      ANDROID_ABI: "x86_64"
+      ANDROID_ARM_MODE: "thumb"
+      ANDROID_ARM_NEON: "TRUE"
+      ANDROID_PLATFORM: "android-23"
+      ANDROID_STL: "c++_shared"
+      ANDROID_TOOLCHAIN: "clang"
+      ANDROID_USE_LEGACY_TOOLCHAIN_FILE: "OFF"
+      CMAKE_ANDROID_STL_TYPE: "c++_shared"
+      CMAKE_CXX_COMPILER_EXTERNAL_TOOLCHAIN: ""
+      CMAKE_CXX_COMPILER_TARGET: "x86_64-none-linux-android23"
+      CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG   -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++"
+      CMAKE_CXX_FLAGS_DEBUG: "-g  -fno-limit-debug-info"
+      CMAKE_C_COMPILER_TARGET: "x86_64-none-linux-android23"
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--gc-sections -Qunused-arguments -Wl,--no-undefined  -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6;C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/3rdparty/kwin"
+      CMAKE_POSITION_INDEPENDENT_CODE: "TRUE"
+      CMAKE_SYSROOT: "C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot"
+    buildResult:
+      variable: "THREADS_HAVE_PTHREAD_ARG"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-r7x8rx
+        
+        Run Build Command(s):C:/Strawberry/c/bin/ninja.exe -v cmTC_d9f14 && [1/2] C:\\Users\\marti\\AppData\\Local\\Android\\Sdk\\ndk\\25.1.8937393\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=x86_64-none-linux-android23 --sysroot=C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -DQT_QML_DEBUG   -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++  -O2 -g -DNDEBUG -std=gnu++17 -fPIE -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_d9f14.dir/CheckForPthreads.cxx.o -MF CMakeFiles\\cmTC_d9f14.dir\\CheckForPthreads.cxx.o.d -o CMakeFiles/cmTC_d9f14.dir/CheckForPthreads.cxx.o -c C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-r7x8rx/CheckForPthreads.cxx
+        [2/2] cmd.exe /C "cd . && C:\\Users\\marti\\AppData\\Local\\Android\\Sdk\\ndk\\25.1.8937393\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=x86_64-none-linux-android23 --sysroot=C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DQT_QML_DEBUG   -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++  -O2 -g -DNDEBUG -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--gc-sections -Qunused-arguments -Wl,--no-undefined  -Wl,--gc-sections CMakeFiles/cmTC_d9f14.dir/CheckForPthreads.cxx.o -o cmTC_d9f14  -pthread   -latomic -lm && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/CheckCXXSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/FindWrapAtomic.cmake:36 (check_cxx_source_compiles)"
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:30 (_qt_internal_find_third_party_dependencies)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:41 (include)"
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:111 (find_dependency)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:39 (_qt_internal_find_qt_dependencies)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/Qt6Config.cmake:164 (find_package)"
+      - "CMakeLists.txt:13 (find_package)"
+    checks:
+      - "Performing Test HAVE_STDATOMIC"
+    directories:
+      source: "C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-ki3q54"
+      binary: "C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-ki3q54"
+    cmakeVariables:
+      ANDROID_ABI: "x86_64"
+      ANDROID_ARM_MODE: "thumb"
+      ANDROID_ARM_NEON: "TRUE"
+      ANDROID_PLATFORM: "android-23"
+      ANDROID_STL: "c++_shared"
+      ANDROID_TOOLCHAIN: "clang"
+      ANDROID_USE_LEGACY_TOOLCHAIN_FILE: "OFF"
+      CMAKE_ANDROID_STL_TYPE: "c++_shared"
+      CMAKE_CXX_COMPILER_EXTERNAL_TOOLCHAIN: ""
+      CMAKE_CXX_COMPILER_TARGET: "x86_64-none-linux-android23"
+      CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG   -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++"
+      CMAKE_CXX_FLAGS_DEBUG: "-g  -fno-limit-debug-info"
+      CMAKE_C_COMPILER_TARGET: "x86_64-none-linux-android23"
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--gc-sections -Qunused-arguments -Wl,--no-undefined  -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6;C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/3rdparty/kwin;C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6;C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/3rdparty/kwin"
+      CMAKE_POSITION_INDEPENDENT_CODE: "TRUE"
+      CMAKE_SYSROOT: "C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot"
+    buildResult:
+      variable: "HAVE_STDATOMIC"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-ki3q54
+        
+        Run Build Command(s):C:/Strawberry/c/bin/ninja.exe -v cmTC_e89eb && [1/2] C:\\Users\\marti\\AppData\\Local\\Android\\Sdk\\ndk\\25.1.8937393\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=x86_64-none-linux-android23 --sysroot=C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DHAVE_STDATOMIC  -DQT_QML_DEBUG   -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++  -O2 -g -DNDEBUG -std=gnu++17 -fPIE -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_e89eb.dir/src.cxx.o -MF CMakeFiles\\cmTC_e89eb.dir\\src.cxx.o.d -o CMakeFiles/cmTC_e89eb.dir/src.cxx.o -c C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-ki3q54/src.cxx
+        [2/2] cmd.exe /C "cd . && C:\\Users\\marti\\AppData\\Local\\Android\\Sdk\\ndk\\25.1.8937393\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=x86_64-none-linux-android23 --sysroot=C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DQT_QML_DEBUG   -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++  -O2 -g -DNDEBUG -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--gc-sections -Qunused-arguments -Wl,--no-undefined  -Wl,--gc-sections CMakeFiles/cmTC_e89eb.dir/src.cxx.o -o cmTC_e89eb  -latomic -lm && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/CheckCXXSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules/FindEGL.cmake:127 (check_cxx_source_compiles)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/FindGLESv2.cmake:13 (find_package)"
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake:30 (_qt_internal_find_third_party_dependencies)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake:40 (include)"
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:111 (find_dependency)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:39 (_qt_internal_find_qt_dependencies)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/Qt6Config.cmake:164 (find_package)"
+      - "CMakeLists.txt:13 (find_package)"
+    checks:
+      - "Performing Test HAVE_EGL"
+    directories:
+      source: "C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-8qv2ia"
+      binary: "C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-8qv2ia"
+    cmakeVariables:
+      ANDROID_ABI: "x86_64"
+      ANDROID_ARM_MODE: "thumb"
+      ANDROID_ARM_NEON: "TRUE"
+      ANDROID_PLATFORM: "android-23"
+      ANDROID_STL: "c++_shared"
+      ANDROID_TOOLCHAIN: "clang"
+      ANDROID_USE_LEGACY_TOOLCHAIN_FILE: "OFF"
+      CMAKE_ANDROID_STL_TYPE: "c++_shared"
+      CMAKE_CXX_COMPILER_EXTERNAL_TOOLCHAIN: ""
+      CMAKE_CXX_COMPILER_TARGET: "x86_64-none-linux-android23"
+      CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG   -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++"
+      CMAKE_CXX_FLAGS_DEBUG: "-g  -fno-limit-debug-info"
+      CMAKE_C_COMPILER_TARGET: "x86_64-none-linux-android23"
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--gc-sections -Qunused-arguments -Wl,--no-undefined  -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6;C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/3rdparty/kwin;C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6;C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/3rdparty/kwin"
+      CMAKE_POSITION_INDEPENDENT_CODE: "TRUE"
+      CMAKE_SYSROOT: "C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot"
+    buildResult:
+      variable: "HAVE_EGL"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-8qv2ia
+        
+        Run Build Command(s):C:/Strawberry/c/bin/ninja.exe -v cmTC_21d2f && [1/2] C:\\Users\\marti\\AppData\\Local\\Android\\Sdk\\ndk\\25.1.8937393\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=x86_64-none-linux-android23 --sysroot=C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DHAVE_EGL  -DQT_QML_DEBUG   -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++  -O2 -g -DNDEBUG -std=gnu++17 -fPIE -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_21d2f.dir/src.cxx.o -MF CMakeFiles\\cmTC_21d2f.dir\\src.cxx.o.d -o CMakeFiles/cmTC_21d2f.dir/src.cxx.o -c C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-8qv2ia/src.cxx
+        [2/2] cmd.exe /C "cd . && C:\\Users\\marti\\AppData\\Local\\Android\\Sdk\\ndk\\25.1.8937393\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=x86_64-none-linux-android23 --sysroot=C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DQT_QML_DEBUG   -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++  -O2 -g -DNDEBUG -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--gc-sections -Qunused-arguments -Wl,--no-undefined  -Wl,--gc-sections CMakeFiles/cmTC_21d2f.dir/src.cxx.o -o cmTC_21d2f  C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/23/libEGL.so   -latomic -lm && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/CheckCXXSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/FindGLESv2.cmake:27 (check_cxx_source_compiles)"
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake:30 (_qt_internal_find_third_party_dependencies)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake:40 (include)"
+      - "C:/Strawberry/c/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:111 (find_dependency)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:39 (_qt_internal_find_qt_dependencies)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
+      - "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/Qt6Config.cmake:164 (find_package)"
+      - "CMakeLists.txt:13 (find_package)"
+    checks:
+      - "Performing Test HAVE_GLESv2"
+    directories:
+      source: "C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-hyq990"
+      binary: "C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-hyq990"
+    cmakeVariables:
+      ANDROID_ABI: "x86_64"
+      ANDROID_ARM_MODE: "thumb"
+      ANDROID_ARM_NEON: "TRUE"
+      ANDROID_PLATFORM: "android-23"
+      ANDROID_STL: "c++_shared"
+      ANDROID_TOOLCHAIN: "clang"
+      ANDROID_USE_LEGACY_TOOLCHAIN_FILE: "OFF"
+      CMAKE_ANDROID_STL_TYPE: "c++_shared"
+      CMAKE_CXX_COMPILER_EXTERNAL_TOOLCHAIN: ""
+      CMAKE_CXX_COMPILER_TARGET: "x86_64-none-linux-android23"
+      CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG   -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++"
+      CMAKE_CXX_FLAGS_DEBUG: "-g  -fno-limit-debug-info"
+      CMAKE_C_COMPILER_TARGET: "x86_64-none-linux-android23"
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--gc-sections -Qunused-arguments -Wl,--no-undefined  -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6;C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/3rdparty/kwin;C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6;C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.6.2/android_x86_64/lib/cmake/Qt6/3rdparty/kwin"
+      CMAKE_POSITION_INDEPENDENT_CODE: "TRUE"
+      CMAKE_SYSROOT: "C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot"
+    buildResult:
+      variable: "HAVE_GLESv2"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-hyq990
+        
+        Run Build Command(s):C:/Strawberry/c/bin/ninja.exe -v cmTC_faaeb && [1/2] C:\\Users\\marti\\AppData\\Local\\Android\\Sdk\\ndk\\25.1.8937393\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=x86_64-none-linux-android23 --sysroot=C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DHAVE_GLESv2  -DQT_QML_DEBUG   -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++  -O2 -g -DNDEBUG -std=gnu++17 -fPIE -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_faaeb.dir/src.cxx.o -MF CMakeFiles\\cmTC_faaeb.dir\\src.cxx.o.d -o CMakeFiles/cmTC_faaeb.dir/src.cxx.o -c C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug/CMakeFiles/CMakeScratch/TryCompile-hyq990/src.cxx
+        [2/2] cmd.exe /C "cd . && C:\\Users\\marti\\AppData\\Local\\Android\\Sdk\\ndk\\25.1.8937393\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=x86_64-none-linux-android23 --sysroot=C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DQT_QML_DEBUG   -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++  -O2 -g -DNDEBUG -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--gc-sections -Qunused-arguments -Wl,--no-undefined  -Wl,--gc-sections CMakeFiles/cmTC_faaeb.dir/src.cxx.o -o cmTC_faaeb  C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/23/libGLESv2.so  C:/Users/marti/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/23/libEGL.so   -latomic -lm && cd ."
+        
+      exitCode: 0
+...

@@ -1,0 +1,123 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="org.qtproject.example.Text1"
+4    android:installLocation="auto"
+5    android:versionCode="1"
+6    android:versionName="1.0" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="23"
+9-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml
+10        android:targetSdkVersion="33" />
+10-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml
+11
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:7:5-67
+12-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:7:22-64
+13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+13-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:8:5-81
+13-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:8:22-78
+14
+15    <supports-screens
+15-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:10:5-14:39
+16        android:anyDensity="true"
+16-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:11:9-34
+17        android:largeScreens="true"
+17-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:12:9-36
+18        android:normalScreens="true"
+18-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:13:9-37
+19        android:smallScreens="true" />
+19-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:14:9-36
+20
+21    <permission
+21-->[androidx.core:core:1.10.1] C:\Users\marti\.gradle\caches\transforms-3\4be2570fd98c550226d6d381b2ee3a14\transformed\core-1.10.1\AndroidManifest.xml:22:5-24:47
+22        android:name="org.qtproject.example.Text1.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+22-->[androidx.core:core:1.10.1] C:\Users\marti\.gradle\caches\transforms-3\4be2570fd98c550226d6d381b2ee3a14\transformed\core-1.10.1\AndroidManifest.xml:23:9-81
+23        android:protectionLevel="signature" />
+23-->[androidx.core:core:1.10.1] C:\Users\marti\.gradle\caches\transforms-3\4be2570fd98c550226d6d381b2ee3a14\transformed\core-1.10.1\AndroidManifest.xml:24:9-44
+24
+25    <uses-permission android:name="org.qtproject.example.Text1.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+25-->[androidx.core:core:1.10.1] C:\Users\marti\.gradle\caches\transforms-3\4be2570fd98c550226d6d381b2ee3a14\transformed\core-1.10.1\AndroidManifest.xml:26:5-97
+25-->[androidx.core:core:1.10.1] C:\Users\marti\.gradle\caches\transforms-3\4be2570fd98c550226d6d381b2ee3a14\transformed\core-1.10.1\AndroidManifest.xml:26:22-94
+26
+27    <application
+27-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:15:5-56:19
+28        android:name="org.qtproject.qt.android.bindings.QtApplication"
+28-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:16:9-71
+29        android:allowBackup="true"
+29-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:20:9-35
+30        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+30-->[androidx.core:core:1.10.1] C:\Users\marti\.gradle\caches\transforms-3\4be2570fd98c550226d6d381b2ee3a14\transformed\core-1.10.1\AndroidManifest.xml:28:18-86
+31        android:debuggable="true"
+32        android:fullBackupOnly="false"
+32-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:21:9-39
+33        android:hardwareAccelerated="true"
+33-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:17:9-43
+34        android:label="Text1"
+34-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:18:9-30
+35        android:requestLegacyExternalStorage="true" >
+35-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:19:9-52
+36        <activity
+36-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:22:9-45:20
+37            android:name="org.qtproject.qt.android.bindings.QtActivity"
+37-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:23:13-72
+38            android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation|mcc|mnc|density"
+38-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:24:13-182
+39            android:exported="true"
+39-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:28:13-36
+40            android:label="Text1"
+40-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:25:13-34
+41            android:launchMode="singleTop"
+41-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:26:13-43
+42            android:screenOrientation="unspecified" >
+42-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:27:13-52
+43            <intent-filter>
+43-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:29:13-32:29
+44                <action android:name="android.intent.action.MAIN" />
+44-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:30:17-69
+44-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:30:25-66
+45
+46                <category android:name="android.intent.category.LAUNCHER" />
+46-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:31:17-77
+46-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:31:27-74
+47            </intent-filter>
+48
+49            <meta-data
+49-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:34:11-36:41
+50                android:name="android.app.lib_name"
+50-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:35:17-52
+51                android:value="Text1" />
+51-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:36:17-38
+52            <meta-data
+52-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:38:11-40:36
+53                android:name="android.app.arguments"
+53-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:39:17-53
+54                android:value="" />
+54-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:40:17-33
+55            <meta-data
+55-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:42:13-44:43
+56                android:name="android.app.extract_android_style"
+56-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:43:17-65
+57                android:value="minimal" />
+57-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:44:17-40
+58        </activity>
+59
+60        <provider
+61            android:name="androidx.core.content.FileProvider"
+61-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:48:13-62
+62            android:authorities="org.qtproject.example.Text1.qtprovider"
+62-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:49:13-62
+63            android:exported="false"
+63-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:50:13-37
+64            android:grantUriPermissions="true" >
+64-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:51:13-47
+65            <meta-data
+65-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:52:13-54:59
+66                android:name="android.support.FILE_PROVIDER_PATHS"
+66-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:53:17-67
+67                android:resource="@xml/qtprovider_paths" />
+67-->C:\Users\marti\Desktop\Important\Qt\build-Text1-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:54:17-57
+68        </provider>
+69    </application>
+70
+71</manifest>

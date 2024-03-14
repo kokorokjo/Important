@@ -1,0 +1,17 @@
+C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_armeabi_v7a-Debug/CMakeFiles/apk.dir
+C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_armeabi_v7a-Debug/CMakeFiles/aab.dir
+C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_armeabi_v7a-Debug/CMakeFiles/audio.dir
+C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_armeabi_v7a-Debug/CMakeFiles/_qt_internal_apk_dependencies.dir
+C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_armeabi_v7a-Debug/CMakeFiles/apk_all.dir
+C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_armeabi_v7a-Debug/CMakeFiles/qt_internal_plugins.dir
+C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_armeabi_v7a-Debug/CMakeFiles/audio_prepare_apk_dir.dir
+C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_armeabi_v7a-Debug/CMakeFiles/audio_make_apk.dir
+C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_armeabi_v7a-Debug/CMakeFiles/audio_make_aab.dir
+C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_armeabi_v7a-Debug/CMakeFiles/edit_cache.dir
+C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_armeabi_v7a-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_armeabi_v7a-Debug/CMakeFiles/list_install_components.dir
+C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_armeabi_v7a-Debug/CMakeFiles/install.dir
+C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_armeabi_v7a-Debug/CMakeFiles/install/local.dir
+C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_armeabi_v7a-Debug/CMakeFiles/install/strip.dir
+C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_armeabi_v7a-Debug/CMakeFiles/audio_autogen_timestamp_deps.dir
+C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_armeabi_v7a-Debug/CMakeFiles/audio_autogen.dir

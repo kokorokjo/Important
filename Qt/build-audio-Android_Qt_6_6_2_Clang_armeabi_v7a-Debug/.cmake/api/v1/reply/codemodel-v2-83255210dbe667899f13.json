@@ -1,0 +1,151 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-322e5ecc7c709896ff7f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "audio",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "_qt_internal_apk_dependencies::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-_qt_internal_apk_dependencies-Debug-271ff2fa84df96515cb1.json",
+					"name" : "_qt_internal_apk_dependencies",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "aab::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-aab-Debug-a535178dd98f10976f5c.json",
+					"name" : "aab",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "apk::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-apk-Debug-dc332e3b1c3b8d70f802.json",
+					"name" : "apk",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "apk_all::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-apk_all-Debug-6b89ef0c4f1d2b6bde4b.json",
+					"name" : "apk_all",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "audio::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-audio-Debug-17b39a0444493ba85d69.json",
+					"name" : "audio",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "audio_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-audio_autogen-Debug-0f4c5fc99b4f6abbb749.json",
+					"name" : "audio_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "audio_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-audio_autogen_timestamp_deps-Debug-7aae19a23ff06f7f44f9.json",
+					"name" : "audio_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "audio_make_aab::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-audio_make_aab-Debug-2cd9456a8fac7384d4df.json",
+					"name" : "audio_make_aab",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "audio_make_apk::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-audio_make_apk-Debug-6837921f4eec921b658f.json",
+					"name" : "audio_make_apk",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "audio_prepare_apk_dir::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-audio_prepare_apk_dir-Debug-1b40bd0f2e2563a0f32b.json",
+					"name" : "audio_prepare_apk_dir",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "qt_internal_plugins::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-qt_internal_plugins-Debug-313432603b2139c922c8.json",
+					"name" : "qt_internal_plugins",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/marti/Desktop/Felgo/build-audio-Android_Qt_6_6_2_Clang_armeabi_v7a-Debug",
+		"source" : "C:/Users/marti/Desktop/Felgo/audio"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}

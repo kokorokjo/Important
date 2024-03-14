@@ -1,0 +1,138 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="org.qtproject.example.audio"
+4    android:installLocation="auto"
+5    android:versionCode="1"
+6    android:versionName="1.0" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="23"
+9-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml
+10        android:targetSdkVersion="33" />
+10-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml
+11
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:7:5-79
+12-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:7:22-76
+13    <uses-permission android:name="android.permission.INTERNET" />
+13-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:8:5-67
+13-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:8:22-64
+14    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+14-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:9:5-81
+14-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:9:22-78
+15    <uses-permission android:name="android.permission.CAMERA" />
+15-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:10:5-65
+15-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:10:22-62
+16    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+16-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:11:5-71
+16-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:11:22-68
+17    <uses-permission android:name="android.permission.BLUETOOTH" />
+17-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:12:5-68
+17-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:12:22-65
+18    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+18-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:13:5-80
+18-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:13:22-77
+19
+20    <supports-screens
+20-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:15:5-19:39
+21        android:anyDensity="true"
+21-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:16:9-34
+22        android:largeScreens="true"
+22-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:17:9-36
+23        android:normalScreens="true"
+23-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:18:9-37
+24        android:smallScreens="true" />
+24-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:19:9-36
+25
+26    <permission
+26-->[androidx.core:core:1.10.1] C:\Users\marti\.gradle\caches\transforms-3\4be2570fd98c550226d6d381b2ee3a14\transformed\core-1.10.1\AndroidManifest.xml:22:5-24:47
+27        android:name="org.qtproject.example.audio.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+27-->[androidx.core:core:1.10.1] C:\Users\marti\.gradle\caches\transforms-3\4be2570fd98c550226d6d381b2ee3a14\transformed\core-1.10.1\AndroidManifest.xml:23:9-81
+28        android:protectionLevel="signature" />
+28-->[androidx.core:core:1.10.1] C:\Users\marti\.gradle\caches\transforms-3\4be2570fd98c550226d6d381b2ee3a14\transformed\core-1.10.1\AndroidManifest.xml:24:9-44
+29
+30    <uses-permission android:name="org.qtproject.example.audio.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+30-->[androidx.core:core:1.10.1] C:\Users\marti\.gradle\caches\transforms-3\4be2570fd98c550226d6d381b2ee3a14\transformed\core-1.10.1\AndroidManifest.xml:26:5-97
+30-->[androidx.core:core:1.10.1] C:\Users\marti\.gradle\caches\transforms-3\4be2570fd98c550226d6d381b2ee3a14\transformed\core-1.10.1\AndroidManifest.xml:26:22-94
+31
+32    <application
+32-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:20:5-61:19
+33        android:name="org.qtproject.qt.android.bindings.QtApplication"
+33-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:21:9-71
+34        android:allowBackup="true"
+34-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:25:9-35
+35        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+35-->[androidx.core:core:1.10.1] C:\Users\marti\.gradle\caches\transforms-3\4be2570fd98c550226d6d381b2ee3a14\transformed\core-1.10.1\AndroidManifest.xml:28:18-86
+36        android:debuggable="true"
+37        android:fullBackupOnly="false"
+37-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:26:9-39
+38        android:hardwareAccelerated="true"
+38-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:22:9-43
+39        android:label="audio"
+39-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:23:9-30
+40        android:requestLegacyExternalStorage="true" >
+40-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:24:9-52
+41        <activity
+41-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:27:9-50:20
+42            android:name="org.qtproject.qt.android.bindings.QtActivity"
+42-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:28:13-72
+43            android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation|mcc|mnc|density"
+43-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:29:13-182
+44            android:exported="true"
+44-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:33:13-36
+45            android:label="audio"
+45-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:30:13-34
+46            android:launchMode="singleTop"
+46-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:31:13-43
+47            android:screenOrientation="unspecified" >
+47-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:32:13-52
+48            <intent-filter>
+48-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:34:13-37:29
+49                <action android:name="android.intent.action.MAIN" />
+49-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:35:17-69
+49-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:35:25-66
+50
+51                <category android:name="android.intent.category.LAUNCHER" />
+51-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:36:17-77
+51-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:36:27-74
+52            </intent-filter>
+53
+54            <meta-data
+54-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:39:11-41:41
+55                android:name="android.app.lib_name"
+55-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:40:17-52
+56                android:value="audio" />
+56-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:41:17-38
+57            <meta-data
+57-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:43:11-45:36
+58                android:name="android.app.arguments"
+58-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:44:17-53
+59                android:value="" />
+59-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:45:17-33
+60            <meta-data
+60-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:47:13-49:43
+61                android:name="android.app.extract_android_style"
+61-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:48:17-65
+62                android:value="minimal" />
+62-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:49:17-40
+63        </activity>
+64
+65        <provider
+66            android:name="androidx.core.content.FileProvider"
+66-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:53:13-62
+67            android:authorities="org.qtproject.example.audio.qtprovider"
+67-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:54:13-62
+68            android:exported="false"
+68-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:55:13-37
+69            android:grantUriPermissions="true" >
+69-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:56:13-47
+70            <meta-data
+70-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:57:13-59:59
+71                android:name="android.support.FILE_PROVIDER_PATHS"
+71-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:58:17-67
+72                android:resource="@xml/qtprovider_paths" />
+72-->C:\Users\marti\Desktop\Felgo\build-audio-Android_Qt_6_6_2_Clang_x86_64-Debug\android-build\AndroidManifest.xml:59:17-57
+73        </provider>
+74    </application>
+75
+76</manifest>
