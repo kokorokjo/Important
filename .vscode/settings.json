@@ -1,3 +1,8 @@
 {
-    "C_Cpp.default.compilerPath": "/usr/bin/g++"
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "iosfwd": "cpp",
+        "ostream": "cpp"
+    },
+    "cmake.sourceDirectory": "/home/martin/Desktop/Programy/asm_c_cpp-develop/asm_c_cpp-develop"
 }

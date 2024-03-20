@@ -10,6 +10,7 @@ int lis(vector<int> const& a) {
 
     for (int i = 0; i < n; i++) {
         int l = upper_bound(d.begin(), d.end(), a[i]) - d.begin();
+        // return iterator of first element greater than a[i]
         if (d[l-1] < a[i] && a[i] < d[l])
             d[l] = a[i];
     }
