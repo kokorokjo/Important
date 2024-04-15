@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script src="https://unpkg.com/wrld.js@1.x.x"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.1/leaflet.css" rel="stylesheet" />
+
+    <link href="https://cdn-webgl.wrld3d.com/wrldjs/addons/resources/v1/latest/css/wrld.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script src="https://cdn-webgl.wrld3d.com/wrldjs/addons/indoor_control/v1/latest/indoor_control.js"></script>
+    <title>test3</title>
+
+  </head>
+  
+  <body>
+  <div style="position: relative">
+    <div id="widget-container" class="wrld-widget-container"></div>
+    <div id="floorButtons" style="visibility: hidden; position: absolute; right: 0; z-index: 20">
+      <button type="button" onclick="getRoute()">Get Route</button>
+    </div>
+
+    <div id="map" style="height: 400px"></div>
+    <script>
+      var map = Wrld.map("map", "your_api_key_here", {
+        center: [56.4602727, -2.9786788],
+        zoom: 18,
+        indoorsEnabled: true
+      });
+      var indoorControl = new WrldIndoorControl("widget-container", map);
+
+      var routeLines = [];
+      var _onRoutesLoaded = function(routes) {
+          // Each step in the route will be on a single floor.
+          for (var stepIndex = 0; stepIndex < routes[0].length; ++stepIndex) {
+             var step = routes[0][stepIndex];
+             var routeLine = Wrld.polyline(step.points,
+             {
+               indoorMapId: step.indoorMapId, 
+               indoorMapFloorId: step.indoorMapFloorId
+            });
+             routeLine.addTo(map);
+             routeLines.push(routeLine);
+          }
+      };
+
+      var getRoute = function() {
+          var startPoint = [-2.978629, 56.46024, 0];
+          var endPoint = [-2.9783117, 56.4600344, 2]; 
+
+          map.routes.getRoute([startPoint, endPoint], _onRoutesLoaded);
+      };
+
+
+      function toggleIndoorButtonVisibility() {
+        var element = document.getElementById("floorButtons");
+        element.style.visibility = element.style.visibility === "visible" ? "hidden" : "visible";
+      }
+
+      function onIndoorMapEntered(event) {
+        toggleIndoorButtonVisibility();
+      }
+
+      function onIndoorMapExited(event) {
+        toggleIndoorButtonVisibility();
+
+        for (var routeIndex = 0; routeIndex < routeLines.length; ++routeIndex) {
+          map.removeLayer(routeLines[routeIndex]);
+        }
+      }
+
+      function onIndoorMapExpanded(event) {
+        for (var routeIndex = 0; routeIndex < routeLines.length; ++routeIndex) {
+          Wrld.setOptions(routeLines[routeIndex], { displayOption: "currentIndoorMap" }); 
+        }
+      }
+
+      function onIndoorMapCollapsed(event) {
+        for (var routeIndex = 0; routeIndex < routeLines.length; ++routeIndex) {
+          Wrld.setOptions(routeLines[routeIndex], { displayOption: "currentFloor" }); 
+        }
+      }
+
+      map.indoors.on("indoormapenter", onIndoorMapEntered);
+      map.indoors.on("indoormapexit", onIndoorMapExited);
+      map.indoors.on("expand", onIndoorMapExpanded);
+      map.indoors.on("collapse", onIndoorMapCollapsed);
+    </script>
+
+  </div>
+  </body>
+</html>

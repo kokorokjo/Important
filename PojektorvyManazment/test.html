@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<!-- <img src="GamcaMapa1.png" usemap="#image-map"> -->
+
+<!-- <map name="image-map">
+    <area target="" alt="33A" title="33A" href="" coords="84,105,29,39" shape="rect">
+    <area target="" alt="31" title="31" href="" coords="113,244,166,305" shape="rect">
+    <area target="" alt="33" title="33" href="" coords="84,77,117,130" shape="rect">
+    <area target="" alt="33B" title="33B" href="" coords="119,80,139,130" shape="rect">
+    <area target="" alt="34" title="34" href="" coords="140,80,197,131" shape="rect">
+    <area target="" alt="35" title="35" href="" coords="198,78,281,133" shape="rect">
+    <area target="" alt="36" title="36" href="" coords="279,78,306,133" shape="rect">
+    <area target="" alt="38" title="38" href="" coords="365,80,408,132" shape="rect">
+    <area target="" alt="39" title="39" href="" coords="408,77,479,131" shape="rect">
+    <area target="" alt="40" title="40" href="" coords="480,79,536,132" shape="rect">
+    <area target="" alt="42" title="42" href="" coords="537,79,562,131" shape="rect">
+    <area target="" alt="32" title="32" href="" coords="110,162,164,216" shape="rect">
+</map> -->
+
+
+
+<svg height="500" width="500">
+    <!-- <img src="GamcaMapa1.png" usemap="#image-map"> -->
+    <image height="500" width="500" href="GamcaMapa1.png" usemap="#image-map" />
+    <!-- <line x1="0" y1="0" x2="300" y2="200" style="stroke:red;stroke-width:2" /> -->
+
+    <!-- <circle r="4.5" cx="50" cy="70" fill="red" /> -->
+    <circle
+        id="route3287-1"
+        style="fill:#000000;stroke:none"
+        cx="50"
+        cy="70"
+        r="4.5"
+        data-neighbors="route3287-2,06-07" />
+        <circle
+        id="route3287-2"
+        style="fill:#000000;stroke:none"
+        cx="90"
+        cy="70"
+        r="4.5"
+        data-neighbors="route3287-1,06-07" />
+
+        
+   
+    
+
+</svg>
+<svg id="svg1" width="0" height="0" >
+    <path
+         id="myNewPath"
+         d="M0 0"             
+         stroke-width="0.3em"
+         style="stroke:#555; fill:none;  "/>
+</svg>
+<button onclick="connectAll()">The time is?</button>
+<script>
+    function highlightRoomAndDrawLine(){
+    x1=50;
+    y1=70;
+    x2=90;
+    y2=70;
+    var newElement = svg.createElementNS('http://www.w3.org/2000/svg', 'path');
+    newElement.setAttribute('d', 'M' + x1 + ',' + y1 + 'L' + x2 + ',' + y2);
+    newElement.style.stroke = '#000000';
+    newElement.style.strokeWidth = '15px'; 
+    svg.appendChild(newElement);
+
+    }
+    function connectAll() {
+    // connect all the paths you want!
+    connectElements($("#svg1"), $("#myNewPath"), $("#route3287"),  $("#route3287"));
+}
+</script>
+ 
+
+
+
+
+
+ <!-- <circle
+id="route3287-1"
+style="fill:#000000;stroke:none"
+cx="84"
+cy="105"
+r=".15"
+data-neighbors="route3296-1,06-07" />  -->
