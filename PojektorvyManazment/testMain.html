@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<svg height="500" width="700">
+  <image height="500" width="500" href="GamcaMapa1.png" usemap="#image-map"  onclick="connectCircles()"/>
+
+      <circle
+      id="start"
+      style="fill:#bb0f0f;stroke:none"
+      cx="243"
+      cy="165"
+      r="4.5"
+      />
+<!-- routes -->
+      <circle
+      id="route-33A"
+      style="fill:#000000;stroke:none"
+      cx="40"
+      cy="110"
+      r="4.5"
+      />
+      <circle
+      id="route-33"
+      style="fill:#000000;stroke:none"
+      cx="73"
+      cy="130"
+      r="4.5"
+      />
+      <circle
+      id="hallway-33"
+      style="fill:#000000;stroke:none"
+      cx="72"
+      cy="165"
+      r="4.5"
+      />
+      <circle
+      id="route-33B"
+      style="fill:#000000;stroke:none"
+      cx="92"
+      cy="130"
+      r="4.5"
+      />
+
+
+      <!-- rooms -->
+      <circle
+      id="room-1"
+      style="fill:#000000;stroke:none"
+      cx="202"
+      cy="116"
+      r="3.5"
+      />
+      <circle
+      id="room-2"
+      style="fill:#000000;stroke:none"
+      cx="202"
+      cy="153"
+      r="3.5"
+      />
+      <circle
+      id="room-3"
+      style="fill:#000000;stroke:none"
+      cx="223"
+      cy="153"
+      r="3.5"
+      />
+      <circle
+      id="room-4"
+      style="fill:#000000;stroke:none"
+      cx="223"
+      cy="116"
+      r="3.5"
+      />
+
+</svg>
+<script>
+  function miestonsti(){
+    var svg = document.querySelector('svg');
+    var circle1 = document.getElementById('room-1');
+    var circle2 = document.getElementById('room-2');
+    var circle3 = document.getElementById('room-3');
+    var circle4 = document.getElementById('room-4');
+
+    var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', `M ${circle1.getAttribute('cx')} ${circle1.getAttribute('cy')} 
+                            L ${circle2.getAttribute('cx')} ${circle2.getAttribute('cy')} 
+                            L ${circle3.getAttribute('cx')} ${circle3.getAttribute('cy')} 
+                            L ${circle4.getAttribute('cx')} ${circle4.getAttribute('cy')}
+                            Z`);
+    path.setAttribute('fill', 'transparent');
+    path.setAttribute('stroke', 'none');
+    path.setAttribute('onclick', 'connectCircles()');
+    svg.appendChild(path);
+  }
+</script>
+
+<script>
+  function connectCircles() {
+    var svg = document.querySelector('svg');
+    var circle1 = document.getElementById('start');
+    var circle2 = document.getElementById('route-33');
+    var circle3 = document.getElementById('hallway-33');
+    var circle4 = document.getElementById('route-33B');
+
+    var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', `M ${circle4.getAttribute('cx')} ${circle4.getAttribute('cy')} 
+                            L ${circle2.getAttribute('cx')} ${circle2.getAttribute('cy')} 
+                            L ${circle3.getAttribute('cx')} ${circle3.getAttribute('cy')} 
+                            `);
+    path.setAttribute('fill', 'none');
+    path.setAttribute('stroke', 'black');
+    svg.appendChild(path);
+
+
+    var cx = parseFloat(circle1.getAttribute("cx"));
+    var cy = parseFloat(circle1.getAttribute("cy"));
+    var path2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path2.setAttribute('d',`M ${circle3.getAttribute('cx')} ${circle3.getAttribute('cy')} 
+                        L ${circle1.getAttribute('cx')} ${circle1.getAttribute('cy')}`);
+    path2.setAttribute('fill', 'none');
+    path2.setAttribute('stroke', 'black');       
+    svg.appendChild(path2);
+  }
+  
+  function undo() {
+    var svg = document.querySelector('svg');
+    var paths = document.querySelectorAll('path');
+    var lastPath = paths[paths.length - 1];
+    svg.removeChild(lastPath);
+    console.log('undo');
+    miestonsti();
+
+  }
+  function clearpathSVG() {
+    var svg = document.querySelector('svg');
+    var paths = document.querySelectorAll('path');
+    var k = paths.length;
+    for (var i = 0; i < k; i++) {
+      svg.removeChild(paths[i]);
+    }
+    miestonsti();
+    
+  }
+  // connectCircles();
+  miestonsti();
+
+
+
+
+</script>
+
+
+<button onclick="connectCircles()">Connect Circles</button>
+<button onclick="clearpathSVG()">Connect undo</button>
+<button onclick="miestonsti()">Miestonsti</button>
+
+
