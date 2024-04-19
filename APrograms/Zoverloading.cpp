@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-// Consider an actual class.
+
 class Obj {
    static int i, j;
    
@@ -10,21 +10,23 @@ public:
    void f() const { cout << i++ << endl; }
    void g() const { cout << j++ << endl; }
 };
+// Create class
 
-// Static member definitions:
 int Obj::i = 10;
 int Obj::j = 12;
+// Static members
 
-// Implement a container for the above class
+
 class ObjContainer {
    vector<Obj*> a;
 
    public:
       void add(Obj* obj) { 
-         a.push_back(obj);  // call vector's standard method.
+         a.push_back(obj);
       }
       friend class SmartPointer;
 };
+// container for the Obj class
 
 // implement smart pointer to access member of Obj class.
 class SmartPointer {
@@ -38,13 +40,13 @@ class SmartPointer {
       }
    
       // Return value indicates end of list:
-      bool operator++() { // Prefix version 
+      bool operator++() { 
          if(index >= oc.a.size()) return false;
          if(oc.a[++index] == 0) return false;
          return true;
       }
    
-      bool operator++(int) { // Postfix version 
+      bool operator++(int) {
          return operator++();
       }
    
