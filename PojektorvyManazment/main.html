@@ -44,6 +44,139 @@
 		!function (i, n) { var o, s, e; function c(e) { try { var t = { supportTests: e, timestamp: (new Date).valueOf() }; sessionStorage.setItem(o, JSON.stringify(t)) } catch (e) { } } function p(e, t, n) { e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); var t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data), r = (e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0), new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data)); return t.every(function (e, t) { return e === r[t] }) } function u(e, t, n) { switch (t) { case "flag": return n(e, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !n(e, "\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !n(e, "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"); case "emoji": return !n(e, "\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff", "\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff") }return !1 } function f(e, t, n) { var r = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300, 150) : i.createElement("canvas"), a = r.getContext("2d", { willReadFrequently: !0 }), o = (a.textBaseline = "top", a.font = "600 32px Arial", {}); return e.forEach(function (e) { o[e] = t(a, e, n) }), o } function t(e) { var t = i.createElement("script"); t.src = e, t.defer = !0, i.head.appendChild(t) } "undefined" != typeof Promise && (o = "wpEmojiSettingsSupports", s = ["flag", "emoji"], n.supports = { everything: !0, everythingExceptFlag: !0 }, e = new Promise(function (e) { i.addEventListener("DOMContentLoaded", e, { once: !0 }) }), new Promise(function (t) { var n = function () { try { var e = JSON.parse(sessionStorage.getItem(o)); if ("object" == typeof e && "number" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && "object" == typeof e.supportTests) return e.supportTests } catch (e) { } return null }(); if (!n) { if ("undefined" != typeof Worker && "undefined" != typeof OffscreenCanvas && "undefined" != typeof URL && URL.createObjectURL && "undefined" != typeof Blob) try { var e = "postMessage(" + f.toString() + "(" + [JSON.stringify(s), u.toString(), p.toString()].join(",") + "));", r = new Blob([e], { type: "text/javascript" }), a = new Worker(URL.createObjectURL(r), { name: "wpTestEmojiSupports" }); return void (a.onmessage = function (e) { c(n = e.data), a.terminate(), t(n) }) } catch (e) { } c(n = f(s, u, p)) } t(n) }).then(function (e) { for (var t in e) n.supports[t] = e[t], n.supports.everything = n.supports.everything && n.supports[t], "flag" !== t && (n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && n.supports[t]); n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && !n.supports.flag, n.DOMReady = !1, n.readyCallback = function () { n.DOMReady = !0 } }).then(function () { return e }).then(function () { var e; n.supports.everything || (n.readyCallback(), (e = n.source || {}).concatemoji ? t(e.concatemoji) : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji))) })) }((window, document), window._wpemojiSettings);
 		/* ]]> */
 	</script>
+	<script type="text/javascript">
+		var graph = new Graph();
+		graph.addEdge("start", "hallway-33C");
+		graph.addEdge("start", "hallway-34");
+		graph.addEdge("start", "hallway-35");
+		graph.addEdge("start", "hallway-36");
+		graph.addEdge("start", "hallway-38");
+		graph.addEdge("start", "hallway-39");
+		graph.addEdge("start", "hallway-40");
+		graph.addEdge("start", "hallway-42");
+		graph.addEdge("hallway-33C", "hallway-32");
+		graph.addEdge("hallway-33C", "hallway-31");
+		
+		graph.addEdge("hallway-42", "room-42");
+		graph.addEdge("hallway-40", "room-40");
+		graph.addEdge("hallway-39", "room-39");
+		graph.addEdge("hallway-38", "room-38");
+		graph.addEdge("hallway-36", "room-36");
+		graph.addEdge("hallway-35", "room-35");
+		graph.addEdge("hallway-34", "room-34");
+		graph.addEdge("hallway-33C", "room-33");
+		graph.addEdge("room-33", "room-33B");
+		graph.addEdge("room-33", "room-33A");
+		graph.addEdge("room-32", "hallway-32");
+		graph.addEdge("room-31", "hallway-31");
+		var myVertices = ["start",
+		  "room-31","room-32","room-33A","room-33","room-33B","room-34","room-35","room-36","room-38","room-39","room-40","room-42",
+		  "hallway-31","hallway-32","hallway-33C","hallway-34","hallway-35","hallway-36","hallway-38","hallway-39","hallway-40","hallway-42"];
+		
+		
+		function Graph() {
+			var neighbors = this.neighbors = {}; 
+		  
+			this.addEdge = function (u, v) {
+			  if (neighbors[u] === undefined) { 
+				neighbors[u] = [];
+			  }
+			  neighbors[u].push(v);
+			  if (neighbors[v] === undefined) {
+				neighbors[v] = [];               
+			  }                                
+			  neighbors[v].push(u);              
+			};
+		  
+			return this;
+		  }
+		function shortestPath(graph, target) {     
+			var source = myVertices[0];       
+			var queue = [ source ];
+			var visited = { "start": true };
+			var predecessor = {};
+			var tail = 0;
+			while (tail < queue.length) {
+			  var u = queue[tail++],  
+				  neighbors = graph.neighbors[u];
+			  for (var i = 0; i < neighbors.length; ++i) {
+				var v = neighbors[i];
+				if (visited[v]) {
+				  continue;
+				}
+				visited[v] = true;
+				if (v === target) {  
+				  var path = [ v ];   
+				  while (u !== source) {
+					path.push(u);
+					u = predecessor[u];          
+				  }
+				  path.push(u);
+				  path.reverse();
+				  return path;
+				}
+				predecessor[v] = u;
+				queue.push(v);
+			  }
+			}
+		  }
+			function miestonsti(){ 
+			  var svg = document.querySelector('svg');
+			  var circle1 = document.getElementById('wall-1');
+			  var circle2 = document.getElementById('wall-2');
+			  var circle3 = document.getElementById('wall-3');
+			  var circle4 = document.getElementById('wall-4');
+		  
+			  var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+			  path.setAttribute('d', `M ${circle1.getAttribute('cx')} ${circle1.getAttribute('cy')} 
+									  L ${circle2.getAttribute('cx')} ${circle2.getAttribute('cy')} 
+									  L ${circle3.getAttribute('cx')} ${circle3.getAttribute('cy')} 
+									  L ${circle4.getAttribute('cx')} ${circle4.getAttribute('cy')}
+									  Z`);
+			  path.setAttribute('fill', 'black');
+			  path.setAttribute('stroke', 'none');
+			  path.setAttribute('onclick', "connectCircles('room-36')");
+			  svg.appendChild(path);
+			}
+			function connectCircles(target) {
+			  clearpathSVG();
+			  way = shortestPath(graph, target);
+			  var svg = document.querySelector('svg');
+		  
+			  for(var i = 0; i < way.length - 1; i++) {
+				var circle1 = document.getElementById(way[i]);
+				var circle2 = document.getElementById(way[i + 1]);
+				var cx1 = parseFloat(circle1.getAttribute("cx"));
+				var cy1 = parseFloat(circle1.getAttribute("cy"));
+				var cx2 = parseFloat(circle2.getAttribute("cx"));
+				var cy2 = parseFloat(circle2.getAttribute("cy"));
+				var path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+				path.setAttribute('d', `M ${circle1.getAttribute('cx')} ${circle1.getAttribute('cy')} 
+									  L ${circle2.getAttribute('cx')} ${circle2.getAttribute('cy')} 
+									  `);
+				path.setAttribute('fill', 'none');
+				path.setAttribute('stroke', 'black');       
+				svg.appendChild(path);
+			  }
+			
+			}
+			
+		   
+			function clearpathSVG() {
+			  var svg = document.querySelector('svg');
+			  var paths = document.querySelectorAll('path');
+			  var k = paths.length;
+			  for (var i = 0; i < k; i++) {
+				svg.removeChild(paths[i]);
+			  }
+			  miestonsti();
+			}
+		  
+		  
+		  
+		  
+		  
+		  </script>
 	<style id="wp-emoji-styles-inline-css" type="text/css">
 		img.wp-smiley,
 		img.emoji {
@@ -1648,58 +1781,213 @@
 							<h1 class="page-title">Mapa</h1>
 							<div class="separator blue"></div>
 							<div class="page-content">
-								<!DOCTYPE html>
-								<html lang="en">
+								
 
-								<head>
-									<meta charset="UTF-8">
-									<meta name="viewport" content="width=device-width, initial-scale=1.0">
-									<title>School Layout</title>
-									<style>
-										/* Set the size of the map container */
-										#map {
-											position: relative;
-											width: 921px;
-											/* Adjust width as needed */
-											height: 1876px;
-											/* Adjust height as needed */
-											background-image: url('mapa_nova_1.jpg');
-											/* Add path to your map image */
-											background-size: cover;
-										}
-
-										.room {
-											position: absolute;
-											border: 2px solid transparent;
-											border-radius: 0px;
-											cursor: pointer;
-											transition: border-width 0.3s;
-										}
-
-										.room:hover {
-											border-color: red;
-											/* Change border color on hover */
-											border-width: 7px;
-										}
-
-										.dot {
-											position: absolute;
-											width: 10px;
-											height: 10px;
-											background-color: red;
-											border-radius: 50%;
-										}
-
-										.line {
-											position: absolute;
-											background-color: red;
-											pointer-events: none;
-											/* Prevent line from intercepting mouse events */
-										}
-									</style>
-								</head>
-
-								<body>
+								
+									<svg height="500" width="700">
+										<image height="500" width="500" href="GamcaMapa1.png" usemap="#image-map"  onclick="connectCircles()"/>
+									  
+											<circle
+											id="start"
+											style="fill:#bb0f0f;stroke:none"
+											cx="243"
+											cy="165"
+											r="5"
+											/>
+									  <!-- routes -->
+											<circle
+											id="room-33A"
+											style="fill:#000000;stroke:none"
+											cx="40"
+											cy="110"
+											r=".5"
+											/>
+											<circle
+											id="room-31"
+											style="fill:#000000;stroke:none"
+											cx="100"
+											cy="256"
+											r=".5"
+											/>
+											<circle
+											id="room-32"
+											style="fill:#000000;stroke:none"
+											cx="100"
+											cy="193"
+											r=".5"
+											/>
+											<circle
+											id="room-33"
+											style="fill:#000000;stroke:none"
+											cx="70"
+											cy="130"
+											r=".5"
+											/>
+											<circle
+											id="room-33B"
+											style="fill:#000000;stroke:none"
+											cx="92"
+											cy="130"
+											r=".5"
+											/>
+											<circle
+											id="room-34"
+											style="fill:#000000;stroke:none"
+											cx="123"
+											cy="130"
+											r=".5"
+											/>
+											<circle
+											id="room-35"
+											style="fill:#000000;stroke:none"
+											cx="172"
+											cy="130"
+											r=".5"
+											/>
+											<circle
+											id="room-36"
+											style="fill:#000000;stroke:none"
+											cx="211"
+											cy="130"
+											r=".5"
+											/>
+											<circle
+											id="room-38"
+											style="fill:#000000;stroke:none"
+											cx="280"
+											cy="130"
+											r=".5"
+											/>
+											<circle
+											id="room-39"
+											style="fill:#000000;stroke:none"
+											cx="318"
+											cy="130"
+											r=".5"
+											/>
+											<circle
+											id="room-40"
+											style="fill:#000000;stroke:none"
+											cx="365"
+											cy="130"
+											r=".5"
+											/>
+											<circle
+											id="room-42"
+											style="fill:#000000;stroke:none"
+											cx="395"
+											cy="130"
+											r=".5"
+											/>
+											<circle
+											id="hallway-31"
+											style="fill:#000000;stroke:none"
+											cx="70"
+											cy="256"
+											r=".5"
+											/>
+											<circle
+											id="hallway-32"
+											style="fill:#000000;stroke:none"
+											cx="70"
+											cy="193"
+											r=".5"
+											/>
+									  
+											<circle
+											id="hallway-33C"
+											style="fill:#000000;stroke:none"
+											cx="70"
+											cy="165"
+											r=".5"
+											/>
+											<circle
+											id="hallway-34"
+											style="fill:#000000;stroke:none"
+											cx="123"
+											cy="165"
+											r=".5"
+											/>
+											<circle
+											id="hallway-35"
+											style="fill:#000000;stroke:none"
+											cx="172"
+											cy="165"
+											r=".5"
+											/>
+											<circle
+											id="hallway-36"
+											style="fill:#000000;stroke:none"
+											cx="211"
+											cy="165"
+											r=".5"
+											/>
+											<circle
+											id="hallway-38"
+											style="fill:#000000;stroke:none"
+											cx="280"
+											cy="165"
+											r=".5"
+											/>
+											<circle
+											id="hallway-39"
+											style="fill:#000000;stroke:none"
+											cx="318"
+											cy="165"
+											r=".5"
+											/>
+											<circle
+											id="hallway-40"
+											style="fill:#000000;stroke:none"
+											cx="365"
+											cy="165"
+											r=".5"
+											/>
+											<circle
+											id="hallway-42"
+											style="fill:#000000;stroke:none"
+											cx="395"
+											cy="165"
+											r=".1"
+											/>
+									  
+											
+									  
+									  
+											<!-- walls -->
+											<circle
+											id="wall-1"
+											style="fill:#000000;stroke:none"
+											cx="202"
+											cy="116"
+											r="3.5"
+											/>
+											<circle
+											id="wall-2"
+											style="fill:#000000;stroke:none"
+											cx="202"
+											cy="153"
+											r="3.5"
+											/>
+											<circle
+											id="wall-3"
+											style="fill:#000000;stroke:none"
+											cx="223"
+											cy="153"
+											r="3.5"
+											/>
+											<circle
+											id="wall-4"
+											style="fill:#000000;stroke:none"
+											cx="223"
+											cy="116"
+											r="3.5"
+											/>
+									  
+									  </svg>
+									<button onclick="connectCircles('room-36')">Connect Circles</button>
+	  								<button onclick="clearpathSVG()">Connect undo</button>
+	  								<button onclick="miestonsti()">Miestonsti</button>
 									<!-- Create a dropdown list to select rooms -->
 									<select id="roomSelect" onchange="highlightRoomAndDrawLine()">
 										<option value="">Select a room</option>
@@ -1716,7 +2004,7 @@
 
 									<!-- Create a div element to hold the map -->
 									<div id="map">
-										<!-- Define rooms as div elements with specific coordinates -->
+										<!-- Define rooms as div elements with specific coordinates  -->
 										<div id="classroom1" class="room"
 											style="left: 161px; top: 148px; width: 138px; height: 96px;"></div>
 										<div id="classroom2" class="room"
@@ -1729,7 +2017,7 @@
 											style="left: 297px; top: 320px; width: 176px; height: 93px;"></div>
 										<div id="classroom6" class="room"
 											style="left: 554px; top: 321px; width: 205px; height: 105px;"></div>
-										<!-- Add more rooms as needed -->
+										
 
 										<!-- Add dot element -->
 										<div class="dot" style="left: 520px; top: 300px;"></div>
@@ -1801,9 +2089,9 @@
 											line.style.width = '0px';
 										}
 									</script>
-								</body>
+								
 
-								</html>
+								
 
 
 

@@ -8,63 +8,192 @@
       style="fill:#bb0f0f;stroke:none"
       cx="243"
       cy="165"
-      r="4.5"
+      r="5"
       />
 <!-- routes -->
       <circle
-      id="route-33A"
+      id="room-33A"
       style="fill:#000000;stroke:none"
       cx="40"
       cy="110"
-      r="4.5"
+      r=".5"
       />
       <circle
-      id="route-33"
+      id="room-31"
       style="fill:#000000;stroke:none"
-      cx="73"
+      cx="100"
+      cy="256"
+      r=".5"
+      />
+      <circle
+      id="room-32"
+      style="fill:#000000;stroke:none"
+      cx="100"
+      cy="193"
+      r=".5"
+      />
+      <circle
+      id="room-33"
+      style="fill:#000000;stroke:none"
+      cx="70"
       cy="130"
-      r="4.5"
+      r=".5"
       />
       <circle
-      id="hallway-33"
-      style="fill:#000000;stroke:none"
-      cx="72"
-      cy="165"
-      r="4.5"
-      />
-      <circle
-      id="route-33B"
+      id="room-33B"
       style="fill:#000000;stroke:none"
       cx="92"
       cy="130"
-      r="4.5"
+      r=".5"
+      />
+      <circle
+      id="room-34"
+      style="fill:#000000;stroke:none"
+      cx="123"
+      cy="130"
+      r=".5"
+      />
+      <circle
+      id="room-35"
+      style="fill:#000000;stroke:none"
+      cx="172"
+      cy="130"
+      r=".5"
+      />
+      <circle
+      id="room-36"
+      style="fill:#000000;stroke:none"
+      cx="211"
+      cy="130"
+      r=".5"
+      />
+      <circle
+      id="room-38"
+      style="fill:#000000;stroke:none"
+      cx="280"
+      cy="130"
+      r=".5"
+      />
+      <circle
+      id="room-39"
+      style="fill:#000000;stroke:none"
+      cx="318"
+      cy="130"
+      r=".5"
+      />
+      <circle
+      id="room-40"
+      style="fill:#000000;stroke:none"
+      cx="365"
+      cy="130"
+      r=".5"
+      />
+      <circle
+      id="room-42"
+      style="fill:#000000;stroke:none"
+      cx="395"
+      cy="130"
+      r=".5"
+      />
+      <circle
+      id="hallway-31"
+      style="fill:#000000;stroke:none"
+      cx="70"
+      cy="256"
+      r=".5"
+      />
+      <circle
+      id="hallway-32"
+      style="fill:#000000;stroke:none"
+      cx="70"
+      cy="193"
+      r=".5"
       />
 
-
-      <!-- rooms -->
       <circle
-      id="room-1"
+      id="hallway-33C"
+      style="fill:#000000;stroke:none"
+      cx="70"
+      cy="165"
+      r=".5"
+      />
+      <circle
+      id="hallway-34"
+      style="fill:#000000;stroke:none"
+      cx="123"
+      cy="165"
+      r=".5"
+      />
+      <circle
+      id="hallway-35"
+      style="fill:#000000;stroke:none"
+      cx="172"
+      cy="165"
+      r=".5"
+      />
+      <circle
+      id="hallway-36"
+      style="fill:#000000;stroke:none"
+      cx="211"
+      cy="165"
+      r=".5"
+      />
+      <circle
+      id="hallway-38"
+      style="fill:#000000;stroke:none"
+      cx="280"
+      cy="165"
+      r=".5"
+      />
+      <circle
+      id="hallway-39"
+      style="fill:#000000;stroke:none"
+      cx="318"
+      cy="165"
+      r=".5"
+      />
+      <circle
+      id="hallway-40"
+      style="fill:#000000;stroke:none"
+      cx="365"
+      cy="165"
+      r=".5"
+      />
+      <circle
+      id="hallway-42"
+      style="fill:#000000;stroke:none"
+      cx="395"
+      cy="165"
+      r=".1"
+      />
+
+      
+
+
+      <!-- walls -->
+      <circle
+      id="wall-1"
       style="fill:#000000;stroke:none"
       cx="202"
       cy="116"
       r="3.5"
       />
       <circle
-      id="room-2"
+      id="wall-2"
       style="fill:#000000;stroke:none"
       cx="202"
       cy="153"
       r="3.5"
       />
       <circle
-      id="room-3"
+      id="wall-3"
       style="fill:#000000;stroke:none"
       cx="223"
       cy="153"
       r="3.5"
       />
       <circle
-      id="room-4"
+      id="wall-4"
       style="fill:#000000;stroke:none"
       cx="223"
       cy="116"
@@ -73,12 +202,91 @@
 
 </svg>
 <script>
-  function miestonsti(){
+var graph = new Graph();
+graph.addEdge("start", "hallway-33C");
+graph.addEdge("start", "hallway-34");
+graph.addEdge("start", "hallway-35");
+graph.addEdge("start", "hallway-36");
+graph.addEdge("start", "hallway-38");
+graph.addEdge("start", "hallway-39");
+graph.addEdge("start", "hallway-40");
+graph.addEdge("start", "hallway-42");
+graph.addEdge("hallway-33C", "hallway-32");
+graph.addEdge("hallway-33C", "hallway-31");
+
+graph.addEdge("hallway-42", "room-42");
+graph.addEdge("hallway-40", "room-40");
+graph.addEdge("hallway-39", "room-39");
+graph.addEdge("hallway-38", "room-38");
+graph.addEdge("hallway-36", "room-36");
+graph.addEdge("hallway-35", "room-35");
+graph.addEdge("hallway-34", "room-34");
+graph.addEdge("hallway-33C", "room-33");
+graph.addEdge("room-33", "room-33B");
+graph.addEdge("room-33", "room-33A");
+graph.addEdge("room-32", "hallway-32");
+graph.addEdge("room-31", "hallway-31");
+var myVertices = ["start",
+  "room-31","room-32","room-33A","room-33","room-33B","room-34","room-35","room-36","room-38","room-39","room-40","room-42",
+  "hallway-31","hallway-32","hallway-33C","hallway-34","hallway-35","hallway-36","hallway-38","hallway-39","hallway-40","hallway-42"];
+
+
+function Graph() {
+    var neighbors = this.neighbors = {}; 
+  
+    this.addEdge = function (u, v) {
+      if (neighbors[u] === undefined) { 
+        neighbors[u] = [];
+      }
+      neighbors[u].push(v);
+      if (neighbors[v] === undefined) {
+        neighbors[v] = [];               
+      }                                
+      neighbors[v].push(u);              
+    };
+  
+    return this;
+  }
+function shortestPath(graph, target) {     
+    var source = myVertices[0];       
+    var queue = [ source ];
+    var visited = { "start": true };
+    var predecessor = {};
+    var tail = 0;
+    while (tail < queue.length) {
+      var u = queue[tail++],  
+          neighbors = graph.neighbors[u];
+      for (var i = 0; i < neighbors.length; ++i) {
+        var v = neighbors[i];
+        if (visited[v]) {
+          continue;
+        }
+        visited[v] = true;
+        if (v === target) {  
+          var path = [ v ];   
+          while (u !== source) {
+            path.push(u);
+            u = predecessor[u];          
+          }
+          path.push(u);
+          path.reverse();
+          return path;
+        }
+        predecessor[v] = u;
+        queue.push(v);
+      }
+    }
+  }
+</script>
+
+
+<script>
+  function miestonsti(){ 
     var svg = document.querySelector('svg');
-    var circle1 = document.getElementById('room-1');
-    var circle2 = document.getElementById('room-2');
-    var circle3 = document.getElementById('room-3');
-    var circle4 = document.getElementById('room-4');
+    var circle1 = document.getElementById('wall-1');
+    var circle2 = document.getElementById('wall-2');
+    var circle3 = document.getElementById('wall-3');
+    var circle4 = document.getElementById('wall-4');
 
     var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     path.setAttribute('d', `M ${circle1.getAttribute('cx')} ${circle1.getAttribute('cy')} 
@@ -88,48 +296,36 @@
                             Z`);
     path.setAttribute('fill', 'transparent');
     path.setAttribute('stroke', 'none');
-    path.setAttribute('onclick', 'connectCircles()');
+    path.setAttribute('onclick', "connectCircles('room-36')");
     svg.appendChild(path);
   }
 </script>
 
 <script>
-  function connectCircles() {
+  function connectCircles(target) {
+    clearpathSVG();
+    way = shortestPath(graph, target);
     var svg = document.querySelector('svg');
-    var circle1 = document.getElementById('start');
-    var circle2 = document.getElementById('route-33');
-    var circle3 = document.getElementById('hallway-33');
-    var circle4 = document.getElementById('route-33B');
 
-    var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-    path.setAttribute('d', `M ${circle4.getAttribute('cx')} ${circle4.getAttribute('cy')} 
+    for(var i = 0; i < way.length - 1; i++) {
+      var circle1 = document.getElementById(way[i]);
+      var circle2 = document.getElementById(way[i + 1]);
+      var cx1 = parseFloat(circle1.getAttribute("cx"));
+      var cy1 = parseFloat(circle1.getAttribute("cy"));
+      var cx2 = parseFloat(circle2.getAttribute("cx"));
+      var cy2 = parseFloat(circle2.getAttribute("cy"));
+      var path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      path.setAttribute('d', `M ${circle1.getAttribute('cx')} ${circle1.getAttribute('cy')} 
                             L ${circle2.getAttribute('cx')} ${circle2.getAttribute('cy')} 
-                            L ${circle3.getAttribute('cx')} ${circle3.getAttribute('cy')} 
                             `);
-    path.setAttribute('fill', 'none');
-    path.setAttribute('stroke', 'black');
-    svg.appendChild(path);
-
-
-    var cx = parseFloat(circle1.getAttribute("cx"));
-    var cy = parseFloat(circle1.getAttribute("cy"));
-    var path2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    path2.setAttribute('d',`M ${circle3.getAttribute('cx')} ${circle3.getAttribute('cy')} 
-                        L ${circle1.getAttribute('cx')} ${circle1.getAttribute('cy')}`);
-    path2.setAttribute('fill', 'none');
-    path2.setAttribute('stroke', 'black');       
-    svg.appendChild(path2);
+      path.setAttribute('fill', 'none');
+      path.setAttribute('stroke', 'black');       
+      svg.appendChild(path);
+    }
+  
   }
   
-  function undo() {
-    var svg = document.querySelector('svg');
-    var paths = document.querySelectorAll('path');
-    var lastPath = paths[paths.length - 1];
-    svg.removeChild(lastPath);
-    console.log('undo');
-    miestonsti();
-
-  }
+ 
   function clearpathSVG() {
     var svg = document.querySelector('svg');
     var paths = document.querySelectorAll('path');
@@ -138,10 +334,8 @@
       svg.removeChild(paths[i]);
     }
     miestonsti();
-    
   }
-  // connectCircles();
-  miestonsti();
+
 
 
 
@@ -149,7 +343,7 @@
 </script>
 
 
-<button onclick="connectCircles()">Connect Circles</button>
+<button onclick="connectCircles('room-40')">Connect Circles</button>
 <button onclick="clearpathSVG()">Connect undo</button>
 <button onclick="miestonsti()">Miestonsti</button>
 
