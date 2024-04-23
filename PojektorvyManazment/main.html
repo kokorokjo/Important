@@ -44,139 +44,6 @@
 		!function (i, n) { var o, s, e; function c(e) { try { var t = { supportTests: e, timestamp: (new Date).valueOf() }; sessionStorage.setItem(o, JSON.stringify(t)) } catch (e) { } } function p(e, t, n) { e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); var t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data), r = (e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0), new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data)); return t.every(function (e, t) { return e === r[t] }) } function u(e, t, n) { switch (t) { case "flag": return n(e, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !n(e, "\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !n(e, "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"); case "emoji": return !n(e, "\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff", "\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff") }return !1 } function f(e, t, n) { var r = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300, 150) : i.createElement("canvas"), a = r.getContext("2d", { willReadFrequently: !0 }), o = (a.textBaseline = "top", a.font = "600 32px Arial", {}); return e.forEach(function (e) { o[e] = t(a, e, n) }), o } function t(e) { var t = i.createElement("script"); t.src = e, t.defer = !0, i.head.appendChild(t) } "undefined" != typeof Promise && (o = "wpEmojiSettingsSupports", s = ["flag", "emoji"], n.supports = { everything: !0, everythingExceptFlag: !0 }, e = new Promise(function (e) { i.addEventListener("DOMContentLoaded", e, { once: !0 }) }), new Promise(function (t) { var n = function () { try { var e = JSON.parse(sessionStorage.getItem(o)); if ("object" == typeof e && "number" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && "object" == typeof e.supportTests) return e.supportTests } catch (e) { } return null }(); if (!n) { if ("undefined" != typeof Worker && "undefined" != typeof OffscreenCanvas && "undefined" != typeof URL && URL.createObjectURL && "undefined" != typeof Blob) try { var e = "postMessage(" + f.toString() + "(" + [JSON.stringify(s), u.toString(), p.toString()].join(",") + "));", r = new Blob([e], { type: "text/javascript" }), a = new Worker(URL.createObjectURL(r), { name: "wpTestEmojiSupports" }); return void (a.onmessage = function (e) { c(n = e.data), a.terminate(), t(n) }) } catch (e) { } c(n = f(s, u, p)) } t(n) }).then(function (e) { for (var t in e) n.supports[t] = e[t], n.supports.everything = n.supports.everything && n.supports[t], "flag" !== t && (n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && n.supports[t]); n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && !n.supports.flag, n.DOMReady = !1, n.readyCallback = function () { n.DOMReady = !0 } }).then(function () { return e }).then(function () { var e; n.supports.everything || (n.readyCallback(), (e = n.source || {}).concatemoji ? t(e.concatemoji) : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji))) })) }((window, document), window._wpemojiSettings);
 		/* ]]> */
 	</script>
-	<script type="text/javascript">
-		var graph = new Graph();
-		graph.addEdge("start", "hallway-33C");
-		graph.addEdge("start", "hallway-34");
-		graph.addEdge("start", "hallway-35");
-		graph.addEdge("start", "hallway-36");
-		graph.addEdge("start", "hallway-38");
-		graph.addEdge("start", "hallway-39");
-		graph.addEdge("start", "hallway-40");
-		graph.addEdge("start", "hallway-42");
-		graph.addEdge("hallway-33C", "hallway-32");
-		graph.addEdge("hallway-33C", "hallway-31");
-		
-		graph.addEdge("hallway-42", "room-42");
-		graph.addEdge("hallway-40", "room-40");
-		graph.addEdge("hallway-39", "room-39");
-		graph.addEdge("hallway-38", "room-38");
-		graph.addEdge("hallway-36", "room-36");
-		graph.addEdge("hallway-35", "room-35");
-		graph.addEdge("hallway-34", "room-34");
-		graph.addEdge("hallway-33C", "room-33");
-		graph.addEdge("room-33", "room-33B");
-		graph.addEdge("room-33", "room-33A");
-		graph.addEdge("room-32", "hallway-32");
-		graph.addEdge("room-31", "hallway-31");
-		var myVertices = ["start",
-		  "room-31","room-32","room-33A","room-33","room-33B","room-34","room-35","room-36","room-38","room-39","room-40","room-42",
-		  "hallway-31","hallway-32","hallway-33C","hallway-34","hallway-35","hallway-36","hallway-38","hallway-39","hallway-40","hallway-42"];
-		
-		
-		function Graph() {
-			var neighbors = this.neighbors = {}; 
-		  
-			this.addEdge = function (u, v) {
-			  if (neighbors[u] === undefined) { 
-				neighbors[u] = [];
-			  }
-			  neighbors[u].push(v);
-			  if (neighbors[v] === undefined) {
-				neighbors[v] = [];               
-			  }                                
-			  neighbors[v].push(u);              
-			};
-		  
-			return this;
-		  }
-		function shortestPath(graph, target) {     
-			var source = myVertices[0];       
-			var queue = [ source ];
-			var visited = { "start": true };
-			var predecessor = {};
-			var tail = 0;
-			while (tail < queue.length) {
-			  var u = queue[tail++],  
-				  neighbors = graph.neighbors[u];
-			  for (var i = 0; i < neighbors.length; ++i) {
-				var v = neighbors[i];
-				if (visited[v]) {
-				  continue;
-				}
-				visited[v] = true;
-				if (v === target) {  
-				  var path = [ v ];   
-				  while (u !== source) {
-					path.push(u);
-					u = predecessor[u];          
-				  }
-				  path.push(u);
-				  path.reverse();
-				  return path;
-				}
-				predecessor[v] = u;
-				queue.push(v);
-			  }
-			}
-		  }
-			function miestonsti(){ 
-			  var svg = document.querySelector('svg');
-			  var circle1 = document.getElementById('wall-1');
-			  var circle2 = document.getElementById('wall-2');
-			  var circle3 = document.getElementById('wall-3');
-			  var circle4 = document.getElementById('wall-4');
-		  
-			  var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-			  path.setAttribute('d', `M ${circle1.getAttribute('cx')} ${circle1.getAttribute('cy')} 
-									  L ${circle2.getAttribute('cx')} ${circle2.getAttribute('cy')} 
-									  L ${circle3.getAttribute('cx')} ${circle3.getAttribute('cy')} 
-									  L ${circle4.getAttribute('cx')} ${circle4.getAttribute('cy')}
-									  Z`);
-			  path.setAttribute('fill', 'black');
-			  path.setAttribute('stroke', 'none');
-			  path.setAttribute('onclick', "connectCircles('room-36')");
-			  svg.appendChild(path);
-			}
-			function connectCircles(target) {
-			  clearpathSVG();
-			  way = shortestPath(graph, target);
-			  var svg = document.querySelector('svg');
-		  
-			  for(var i = 0; i < way.length - 1; i++) {
-				var circle1 = document.getElementById(way[i]);
-				var circle2 = document.getElementById(way[i + 1]);
-				var cx1 = parseFloat(circle1.getAttribute("cx"));
-				var cy1 = parseFloat(circle1.getAttribute("cy"));
-				var cx2 = parseFloat(circle2.getAttribute("cx"));
-				var cy2 = parseFloat(circle2.getAttribute("cy"));
-				var path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-				path.setAttribute('d', `M ${circle1.getAttribute('cx')} ${circle1.getAttribute('cy')} 
-									  L ${circle2.getAttribute('cx')} ${circle2.getAttribute('cy')} 
-									  `);
-				path.setAttribute('fill', 'none');
-				path.setAttribute('stroke', 'black');       
-				svg.appendChild(path);
-			  }
-			
-			}
-			
-		   
-			function clearpathSVG() {
-			  var svg = document.querySelector('svg');
-			  var paths = document.querySelectorAll('path');
-			  var k = paths.length;
-			  for (var i = 0; i < k; i++) {
-				svg.removeChild(paths[i]);
-			  }
-			  miestonsti();
-			}
-		  
-		  
-		  
-		  
-		  
-		  </script>
 	<style id="wp-emoji-styles-inline-css" type="text/css">
 		img.wp-smiley,
 		img.emoji {
@@ -1785,7 +1652,7 @@
 
 								
 									<svg height="500" width="700">
-										<image height="500" width="500" href="GamcaMapa1.png" usemap="#image-map"  onclick="connectCircles()"/>
+										<image height="500" width="500" href="GamcaMapa1.png" usemap="#image-map" />
 									  
 											<circle
 											id="start"
@@ -1798,100 +1665,107 @@
 											<circle
 											id="room-33A"
 											style="fill:#000000;stroke:none"
-											cx="40"
-											cy="110"
-											r=".5"
+											cx="60"
+											cy="125"
+											r=".1"
 											/>
 											<circle
 											id="room-31"
 											style="fill:#000000;stroke:none"
-											cx="100"
+											cx="80"
 											cy="256"
-											r=".5"
+											r=".1"
 											/>
 											<circle
 											id="room-32"
 											style="fill:#000000;stroke:none"
-											cx="100"
+											cx="80"
 											cy="193"
-											r=".5"
+											r=".1"
 											/>
 											<circle
 											id="room-33"
 											style="fill:#000000;stroke:none"
 											cx="70"
+											cy="154"
+											r=".1"
+											/>
+											<circle
+											id="room-33M"
+											style="fill:#000000;stroke:none"
+											cx="70"
 											cy="130"
-											r=".5"
+											r=".1"
 											/>
 											<circle
 											id="room-33B"
 											style="fill:#000000;stroke:none"
-											cx="92"
+											cx="86"
 											cy="130"
-											r=".5"
+											r=".1"
 											/>
 											<circle
 											id="room-34"
 											style="fill:#000000;stroke:none"
 											cx="123"
-											cy="130"
-											r=".5"
+											cy="154"
+											r=".1"
 											/>
 											<circle
 											id="room-35"
 											style="fill:#000000;stroke:none"
 											cx="172"
-											cy="130"
-											r=".5"
+											cy="154"
+											r=".1"
 											/>
 											<circle
 											id="room-36"
 											style="fill:#000000;stroke:none"
 											cx="211"
-											cy="130"
-											r=".5"
+											cy="154"
+											r=".1"
 											/>
 											<circle
 											id="room-38"
 											style="fill:#000000;stroke:none"
 											cx="280"
-											cy="130"
+											cy="154"
 											r=".5"
 											/>
 											<circle
 											id="room-39"
 											style="fill:#000000;stroke:none"
 											cx="318"
-											cy="130"
-											r=".5"
+											cy="154"
+											r=".1"
 											/>
 											<circle
 											id="room-40"
 											style="fill:#000000;stroke:none"
 											cx="365"
-											cy="130"
-											r=".5"
+											cy="154"
+											r=".1"
 											/>
 											<circle
 											id="room-42"
 											style="fill:#000000;stroke:none"
 											cx="395"
-											cy="130"
-											r=".5"
+											cy="154"
+											r=".1"
 											/>
 											<circle
 											id="hallway-31"
 											style="fill:#000000;stroke:none"
 											cx="70"
 											cy="256"
-											r=".5"
+											r=".1"
 											/>
 											<circle
 											id="hallway-32"
 											style="fill:#000000;stroke:none"
 											cx="70"
 											cy="193"
-											r=".5"
+											r=".1"
 											/>
 									  
 											<circle
@@ -1899,49 +1773,49 @@
 											style="fill:#000000;stroke:none"
 											cx="70"
 											cy="165"
-											r=".5"
+											r=".1"
 											/>
 											<circle
 											id="hallway-34"
 											style="fill:#000000;stroke:none"
 											cx="123"
 											cy="165"
-											r=".5"
+											r=".1"
 											/>
 											<circle
 											id="hallway-35"
 											style="fill:#000000;stroke:none"
 											cx="172"
 											cy="165"
-											r=".5"
+											r=".1"
 											/>
 											<circle
 											id="hallway-36"
 											style="fill:#000000;stroke:none"
 											cx="211"
 											cy="165"
-											r=".5"
+											r=".1"
 											/>
 											<circle
 											id="hallway-38"
 											style="fill:#000000;stroke:none"
 											cx="280"
 											cy="165"
-											r=".5"
+											r=".1"
 											/>
 											<circle
 											id="hallway-39"
 											style="fill:#000000;stroke:none"
 											cx="318"
 											cy="165"
-											r=".5"
+											r=".1"
 											/>
 											<circle
 											id="hallway-40"
 											style="fill:#000000;stroke:none"
 											cx="365"
 											cy="165"
-											r=".5"
+											r=".1"
 											/>
 											<circle
 											id="hallway-42"
@@ -1955,146 +1829,481 @@
 									  
 									  
 											<!-- walls -->
+											<!-- 33-36 -->
 											<circle
 											id="wall-1"
 											style="fill:#000000;stroke:none"
-											cx="202"
-											cy="116"
-											r="3.5"
+											cx="201.8"
+											cy="114.5"
+											r=".1"
 											/>
 											<circle
 											id="wall-2"
 											style="fill:#000000;stroke:none"
-											cx="202"
-											cy="153"
-											r="3.5"
+											cx="201.8"
+											cy="153.5"
+											r=".1"
 											/>
 											<circle
 											id="wall-3"
 											style="fill:#000000;stroke:none"
-											cx="223"
-											cy="153"
-											r="3.5"
+											cx="221.5"
+											cy="153.5"
+											r=".1"
 											/>
 											<circle
 											id="wall-4"
 											style="fill:#000000;stroke:none"
-											cx="223"
-											cy="116"
-											r="3.5"
+											cx="221.5"
+											cy="114.5"
+											r=".1"
 											/>
+											<circle
+											id="wall-5"
+											style="fill:#000000;stroke:none"
+											cx="142.5"
+											cy="114.5"
+											r=".1"
+											/>
+											 <circle
+											id="wall-6"
+											style="fill:#000000;stroke:none"
+											cx="142.5"
+											cy="153.5"
+											r=".1"
+											/>
+											<circle
+											id="wall-7"
+											style="fill:#000000;stroke:none"
+											cx="100"
+											cy="153.5"
+											r=".1"
+											/>
+											<circle
+											id="wall-8"
+											style="fill:#000000;stroke:none"
+											cx="100"
+											cy="114.5"
+											r=".1"
+											/>
+											<circle
+											id="wall-9"
+											style="fill:#000000;stroke:none"
+											cx="86.2"
+											cy="153.5"
+											r=".1"
+											/>
+											<circle
+											id="wall-10"
+											style="fill:#000000;stroke:none"
+											cx="86.2"
+											cy="114.5"
+											r=".1"
+											/>
+											<circle
+											id="wall-11"
+											style="fill:#000000;stroke:none"
+											cx="60"
+											cy="114.5"
+											r=".1"
+											/>
+											<circle
+											id="wall-12"
+											style="fill:#000000;stroke:none"
+											cx="60"
+											cy="153.5"
+											r=".1"
+											/>
+											<!-- 33A -->
+											<circle
+											id="wall-13"
+											style="fill:#000000;stroke:none"
+											cx="60"
+											cy="134"
+											r=".1"
+											/>
+											<circle
+											id="wall-14"
+											style="fill:#000000;stroke:none"
+											cx="60"
+											cy="86"
+											r=".1"
+											/>
+											<circle
+											id="wall-15"
+											style="fill:#000000;stroke:none"
+											cx="21.8"
+											cy="134"
+											r=".1"
+											/>
+											<circle
+											id="wall-16"
+											style="fill:#000000;stroke:none"
+											cx="21.8"
+											cy="86"
+											r=".1"
+											/>
+											<!-- 31 a 32 -->
+											<circle
+											id="wall-17"
+											style="fill:#000000;stroke:none"
+											cx="80.5"
+											cy="174"
+											r=".1"
+											/>
+											<circle
+											id="wall-18"
+											style="fill:#000000;stroke:none"
+											cx="80.5"
+											cy="213.7"
+											r=".1"
+											/>
+											<circle
+											id="wall-19"
+											style="fill:#000000;stroke:none"
+											cx="119.7"
+											cy="174"
+											r=".1"
+											/>
+											<circle
+											id="wall-20"
+											style="fill:#000000;stroke:none"
+											cx="119.7"
+											cy="213.7"
+											r=".1"
+											/>
+											<circle
+											id="wall-21"
+											style="fill:#000000;stroke:none"
+											cx="119.7"
+											cy="234"
+											r=".1"
+											/>
+											<circle
+											id="wall-22"
+											style="fill:#000000;stroke:none"
+											cx="119.7"
+											cy="278.7"
+											r=".1"
+											/>
+											<circle
+											id="wall-23"
+											style="fill:#000000;stroke:none"
+											cx="80.5"
+											cy="278.7"
+											r=".1"
+											/>
+											<circle
+											id="wall-24"
+											style="fill:#000000;stroke:none"
+											cx="80.5"
+											cy="234"
+											r=".1"
+											/>
+											<!-- 38-42 -->
+											<circle
+											id="wall-25"
+											style="fill:#000000;stroke:none"
+											cx="263"
+											cy="114.5"
+											r=".1"
+											/>
+											<circle
+											id="wall-26"
+											style="fill:#000000;stroke:none"
+											cx="263"
+											cy="153.5"
+											r=".1"
+											/>
+											<circle
+											id="wall-27"
+											style="fill:#000000;stroke:none"
+											cx="292"
+											cy="114.5"
+											r=".1"
+											/>
+											<circle
+											id="wall-28"
+											style="fill:#000000;stroke:none"
+											cx="292"
+											cy="153.5"
+											r=".1"
+											/>
+											<circle
+											id="wall-29"
+											style="fill:#000000;stroke:none"
+											cx="345.5"
+											cy="114.5"
+											r=".1"
+											/>
+											<circle
+											id="wall-30"
+											style="fill:#000000;stroke:none"
+											cx="345.5"
+											cy="153.5"
+											r=".1"
+											/>
+											<circle
+											id="wall-31"
+											style="fill:#000000;stroke:none"
+											cx="386"
+											cy="114.5"
+											r=".1"
+											/>
+											<circle
+											id="wall-32"
+											style="fill:#000000;stroke:none"
+											cx="386"
+											cy="153.5"
+											r=".1"
+											/>
+											<circle
+											id="wall-33"
+											style="fill:#000000;stroke:none"
+											cx="405"
+											cy="114.5"
+											r=".1"
+											/>
+											<circle
+											id="wall-34"
+											style="fill:#000000;stroke:none"
+											cx="405"
+											cy="153.5"
+											r=".1"
+											/>
+
+											 
 									  
 									  </svg>
-									<button onclick="connectCircles('room-36')">Connect Circles</button>
-	  								<button onclick="clearpathSVG()">Connect undo</button>
-	  								<button onclick="miestonsti()">Miestonsti</button>
-									<!-- Create a dropdown list to select rooms -->
-									<select id="roomSelect" onchange="highlightRoomAndDrawLine()">
+									  <select id="roomSelect" onchange="chooseRoom()">
 										<option value="">Select a room</option>
-										<option value="classroom1">1.A</option>
-										<option value="classroom2">2.A</option>
-										<option value="classroom3">Oktáva</option>
-										<option value="classroom4">3.A</option>
-										<option value="classroom5">4.A</option>
-										<option value="classroom6">Septima</option>
+										<option value="room-31">31</option>
+										<option value="room-32">32</option>
+										<option value="room-33">33</option>
+										<option value="room-33A">33A</option>
+										<option value="room-33B">33B</option>
+										<option value="room-34">34</option>
+										<option value="room-35">35</option>
+										<option value="room-36">36</option>
+										<option value="room-38">38</option>
+										<option value="room-39">39</option>
+										<option value="room-40">40</option>
+										<option value="room-42">42</option>
+
+
 										<!-- Add more options for other rooms -->
 									</select>
-
-
-
-									<!-- Create a div element to hold the map -->
-									<div id="map">
-										<!-- Define rooms as div elements with specific coordinates  -->
-										<div id="classroom1" class="room"
-											style="left: 161px; top: 148px; width: 138px; height: 96px;"></div>
-										<div id="classroom2" class="room"
-											style="left: 304px; top: 149px; width: 170px; height: 93px;"></div>
-										<div id="classroom3" class="room"
-											style="left: 559px; top: 147px; width: 217px; height: 93px;"></div>
-										<div id="classroom4" class="room"
-											style="left: 167px; top: 320px; width: 120px; height: 95px;"></div>
-										<div id="classroom5" class="room"
-											style="left: 297px; top: 320px; width: 176px; height: 93px;"></div>
-										<div id="classroom6" class="room"
-											style="left: 554px; top: 321px; width: 205px; height: 105px;"></div>
-										
-
-										<!-- Add dot element -->
-										<div class="dot" style="left: 520px; top: 300px;"></div>
-
-										<!-- Add line element -->
-										<div class="line" id="line"></div>
-									</div>
-
-									<!-- Script to highlight the selected room and draw line from dot to room -->
+	  								<button onclick="clearpathSVG()"> Clear</button>
 									<script>
-										function highlightRoomAndDrawLine() {
-											// Reset styles for all rooms
-											var rooms = document.querySelectorAll('.room');
-											rooms.forEach(function (room) {
-												room.style.border = '2px solid transparent';
-											});
-
-											// Highlight the selected room
-											var selectedRoomId = document.getElementById("roomSelect").value;
-											if (!selectedRoomId) {
-												// No room selected, hide the line
-												removeLine();
-												return;
+										var graph = new Graph();
+										graph.addEdge("start", "hallway-33C");
+										graph.addEdge("start", "hallway-34");
+										graph.addEdge("start", "hallway-35");
+										graph.addEdge("start", "hallway-36");
+										graph.addEdge("start", "hallway-38");
+										graph.addEdge("start", "hallway-39");
+										graph.addEdge("start", "hallway-40");
+										graph.addEdge("start", "hallway-42");
+										graph.addEdge("hallway-33C", "hallway-32");
+										graph.addEdge("hallway-33C", "hallway-31");
+										
+										graph.addEdge("hallway-42", "room-42");
+										graph.addEdge("hallway-40", "room-40");
+										graph.addEdge("hallway-39", "room-39");
+										graph.addEdge("hallway-38", "room-38");
+										graph.addEdge("hallway-36", "room-36");
+										graph.addEdge("hallway-35", "room-35");
+										graph.addEdge("hallway-34", "room-34");
+										graph.addEdge("hallway-33C", "room-33");
+										graph.addEdge("room-33", "room-33M");
+										graph.addEdge("room-33M", "room-33B");
+										graph.addEdge("room-33M", "room-33A");
+										graph.addEdge("room-32", "hallway-32");
+										graph.addEdge("room-31", "hallway-31");
+										var myVertices = ["start",
+										  "room-31","room-32","room-33A","room-33","room-33B","room-34","room-35","room-36","room-38","room-39","room-40","room-42",
+										  "hallway-31","hallway-32","hallway-33C","hallway-34","hallway-35","hallway-36","hallway-38","hallway-39","hallway-40","hallway-42"];
+										var myRooms =["room-31","room-32","room-33A","room-33","room-33B","room-34","room-35","room-36","room-38","room-39","room-40","room-42"] 
+										  var cordsOfRoom = {
+											"room-42": ["wall-34", "wall-32", "wall-31", "wall-33"],
+											"room-40": ["wall-32", "wall-31", "wall-29", "wall-30"],
+											"room-39": ["wall-30", "wall-29", "wall-27", "wall-28"],
+											"room-38": ["wall-28", "wall-27", "wall-25", "wall-26"],
+											"room-36": ["wall-1", "wall-2", "wall-3", "wall-4"],
+										   	"room-35": ["wall-6", "wall-5", "wall-1", "wall-2"],
+											"room-34": ["wall-8", "wall-7", "wall-6", "wall-5"],
+											"room-33B":["wall-10", "wall-9", "wall-7", "wall-8"],
+											"room-33A":["wall-16", "wall-14", "wall-13", "wall-15"],
+											"room-33": ["wall-12", "wall-11", "wall-10", "wall-9"],
+											"room-32": ["wall-17", "wall-18", "wall-20", "wall-19"],
+											"room-31": ["wall-21", "wall-22", "wall-23", "wall-24"]}
+										
+										
+										function Graph() {
+											var neighbors = this.neighbors = {}; 
+										  
+											this.addEdge = function (u, v) {
+											  if (neighbors[u] === undefined) { 
+												neighbors[u] = [];
+											  }
+											  neighbors[u].push(v);
+											  if (neighbors[v] === undefined) {
+												neighbors[v] = [];               
+											  }                                
+											  neighbors[v].push(u);              
+											};
+										  
+											return this;
+										  }
+										function shortestPath(graph, target) {     
+											var source = myVertices[0];       
+											var queue = [ source ];
+											var visited = { "start": true };
+											var predecessor = {};
+											var tail = 0;
+											while (tail < queue.length) {
+											  var u = queue[tail++],  
+												  neighbors = graph.neighbors[u];
+											  for (var i = 0; i < neighbors.length; ++i) {
+												var v = neighbors[i];
+												if (visited[v]) {
+												  continue;
+												}
+												visited[v] = true;
+												if (v === target) {  
+												  var path = [ v ];   
+												  while (u !== source) {
+													path.push(u);
+													u = predecessor[u];          
+												  }
+												  path.push(u);
+												  path.reverse();
+												  return path;
+												}
+												predecessor[v] = u;
+												queue.push(v);
+											  }
 											}
-											var selectedRoom = document.getElementById(selectedRoomId);
-											selectedRoom.style.border = '7px solid red';
+										  }
+										  function miestonsti(){ 
+											var svg = document.querySelector('svg');
+											for(var i=0;i<myRooms.length;i++){
+												var circle1 = document.getElementById(cordsOfRoom[myRooms[i]][0]);
+												var circle2 = document.getElementById(cordsOfRoom[myRooms[i]][1]);
+												var circle3 = document.getElementById(cordsOfRoom[myRooms[i]][2]);
+												var circle4 = document.getElementById(cordsOfRoom[myRooms[i]][3]);
+												var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+												path.setAttribute('d', `M ${circle1.getAttribute('cx')} ${circle1.getAttribute('cy')} 
+																	L ${circle2.getAttribute('cx')} ${circle2.getAttribute('cy')} 
+																	L ${circle3.getAttribute('cx')} ${circle3.getAttribute('cy')} 
+																	L ${circle4.getAttribute('cx')} ${circle4.getAttribute('cy')}
+																	Z`);
+												path.setAttribute('id', myRooms[i]);
+												path.setAttribute('fill', 'transparent');
+												path.setAttribute('stroke', 'none');
+												path.setAttribute('onclick', `connectCircles('${myRooms[i]}')`);
+												svg.appendChild(path);
+											}											
+										  }
 
-											// Get coordinates of the center of the room
-											var roomRect = selectedRoom.getBoundingClientRect();
-											var roomCenterX = roomRect.left + selectedRoom.offsetWidth / 2;
-											var roomCenterY = roomRect.top + selectedRoom.offsetHeight / 2;
+										  function highlightRoom(room){
+											var svg = document.querySelector('svg');
+											var circle1 = document.getElementById(cordsOfRoom[room][0]);
+											var circle2 = document.getElementById(cordsOfRoom[room][1]);
+											var circle3 = document.getElementById(cordsOfRoom[room][2]);
+											var circle4 = document.getElementById(cordsOfRoom[room][3]);
+											console.log(circle1, circle2, circle3, circle4);
+											console.log(cordsOfRoom[room][0], cordsOfRoom[room][1], cordsOfRoom[room][2], cordsOfRoom[room][3]);
+										
+											var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+											path.setAttribute('d', `M ${circle1.getAttribute('cx')} ${circle1.getAttribute('cy')} 
+																	L ${circle2.getAttribute('cx')} ${circle2.getAttribute('cy')} 
+																	L ${circle3.getAttribute('cx')} ${circle3.getAttribute('cy')} 
+																	L ${circle4.getAttribute('cx')} ${circle4.getAttribute('cy')}
+																	Z`);
+											path.setAttribute('id', room);
+											console.log(room);
+											path.setAttribute('fill', 'none');
+											path.setAttribute('stroke-width', '3');
+											path.setAttribute('stroke', 'red');
+											svg.appendChild(path);
+											
+											}
+										  
 
-											// Get coordinates of the dot
-											var dot = document.querySelector('.dot');
-											var dotX = parseInt(dot.style.left); // Get dot X coordinate
-											var dotY = parseInt(dot.style.top); // Get dot Y coordinate
+										  function connectCircles(target) {
+											clearpathSVG();
+											highlightRoom(target);
+											way = shortestPath(graph, target);
+											var svg = document.querySelector('svg');
+										
+											for(var i = 0; i < way.length - 1; i++) {
+											  var circle1 = document.getElementById(way[i]);
+											  var circle2 = document.getElementById(way[i + 1]);
+											  var cx1 = parseFloat(circle1.getAttribute("cx"));
+											  var cy1 = parseFloat(circle1.getAttribute("cy"));
+											  var cx2 = parseFloat(circle2.getAttribute("cx"));
+											  var cy2 = parseFloat(circle2.getAttribute("cy"));
+											  var path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+											  path.setAttribute('d', `M ${circle1.getAttribute('cx')} ${circle1.getAttribute('cy')} 
+																	L ${circle2.getAttribute('cx')} ${circle2.getAttribute('cy')} 
+																	`);
+											  path.setAttribute('id', 'cesta');
+											  path.setAttribute('fill', 'none');
+											  path.setAttribute('stroke', 'green');      
+											  path.setAttribute('stroke-width', '3'); 
+											  svg.appendChild(path);
+											}
+										  
+										  }
+										  
+										 
+										  function clearpathSVG() {
+											var svg = document.querySelector('svg');
+											var paths = document.querySelectorAll('path');
+											var k = paths.length;
+											for (var i = 0; i < k; i++) {
+											  svg.removeChild(paths[i]);
+											}
+											miestonsti();
+										  }
 
-											// Draw line from dot to room center
-											drawLine(dotX, dotY, roomCenterX, roomCenterY);
-										}
+										  var dict ={
+											"room-31":"1.A",
+											"room-32":"2.A",
+											"room-33A":"Oktáva",
+											"room-33":"3.A",
+											"room-33B":"4.A",
+											"room-34":"Septima",
+											"room-35":"5.A",
+											"room-36":"6.A",
+											"room-38":"7.A",
+											"room-39":"8.A",
+											"room-40":"9.A",
+											"room-42":"10.A",
 
-										function drawLine(startX, startY, endX, endY) {
-											// Calculate line length and angle
-											var length = Math.sqrt(Math.pow(endX - startX, 2) + Math.pow(endY - startY, 2));
-											var angle = Math.atan2(endY - startY, endX - startX) * 180 / Math.PI;
-
-											// Log startX and startY values
-											console.log('startX:', startX);
-											console.log('startY:', startY);
-											console.log('endX:', endX);
-											console.log('endY:', endY);
-											console.log('angle:', angle);
+										  }
+										  
+										  function chooseRoom() {
+											var room = document.getElementById("roomSelect").value;
+											connectCircles(room);
 
 
-											// Create a line element
-											var line = document.getElementById('line');
-											line.style.left = startX + 'px';
-											line.style.top = startY + 'px';
-											line.style.width = length + 'px';
-											line.style.transform = 'rotate(' + angle + 'deg)';
-											line.style.height = '0px'; // Set line thickness
-											line.style.backgroundColor = 'red'; // Set line color
-											line.style.position = 'absolute'; // Ensure proper positioning
-										}
-
-										function removeLine() {
-											// Hide the line by setting its width to 0
-											var line = document.getElementById('line');
-											line.style.width = '0px';
-										}
-									</script>
+										  }
+										// highlightRoom();
+										miestonsti();
+										
+										
+										
+										
+										</script>
+									
 								
 
 								
 
-
-
+									
+									
 
 								<div class="page-note">
 									<div class="separator orange"></div>
@@ -2105,6 +2314,7 @@
 				</div>
 			</div>
 		</section>
+		
 
 		<section class="footer">
 			<div class="footer-decoration"></div>
@@ -2222,208 +2432,7 @@
 				class="fa fa-chevron-up"></i></button>
 	</div><!-- wrapper -->
 
-	<!-- Consent Management powered by Complianz | GDPR/CCPA Cookie Consent https://wordpress.org/plugins/complianz-gdpr -->
-	<div id="cmplz-cookiebanner-container">
-		<div class="cmplz-cookiebanner cmplz-hidden banner-1 bottom-left-view-preferences optin cmplz-bottom-left cmplz-categories-type-view-preferences"
-			aria-modal="true" data-nosnippet="true" role="dialog" aria-live="polite"
-			aria-labelledby="cmplz-header-1-optin" aria-describedby="cmplz-message-1-optin">
-			<div class="cmplz-header">
-				<div class="cmplz-logo"></div>
-				<div class="cmplz-title" id="cmplz-header-1-optin">Spravujte súhlas so súbormi cookie</div>
-				<div class="cmplz-close" tabindex="0" role="button" aria-label="Zavrieť okno">
-					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times"
-						class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 352 512">
-						<path fill="currentColor"
-							d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z">
-						</path>
-					</svg>
-				</div>
-			</div>
-
-			<div class="cmplz-divider cmplz-divider-header"></div>
-			<div class="cmplz-body">
-				<div class="cmplz-message" id="cmplz-message-1-optin">Na poskytovanie tých najlepších skúseností
-					používame technológie, ako sú súbory cookie na ukladanie a/alebo prístup k informáciám o zariadení.
-					Súhlas s týmito technológiami nám umožní spracovávať údaje, ako je správanie pri prehliadaní alebo
-					jedinečné ID na tejto stránke. Nesúhlas alebo odvolanie súhlasu môže nepriaznivo ovplyvniť určité
-					vlastnosti a funkcie.</div>
-				<!-- categories start -->
-				<div class="cmplz-categories">
-					<details class="cmplz-category cmplz-functional">
-						<summary>
-							<span class="cmplz-category-header">
-								<span class="cmplz-category-title">Funkčné</span>
-								<span class="cmplz-always-active">
-									<span class="cmplz-banner-checkbox">
-										<input type="checkbox" id="cmplz-functional-optin"
-											data-category="cmplz_functional"
-											class="cmplz-consent-checkbox cmplz-functional" size="40" value="1" />
-										<label class="cmplz-label" for="cmplz-functional-optin" tabindex="0"><span
-												class="screen-reader-text">Funkčné</span></label>
-									</span>
-									Vždy aktívny </span>
-								<span class="cmplz-icon cmplz-open">
-									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18">
-										<path
-											d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z" />
-									</svg>
-								</span>
-							</span>
-						</summary>
-						<div class="cmplz-description">
-							<span class="cmplz-description-functional">Technické uloženie alebo prístup sú nevyhnutne
-								potrebné na legitímny účel umožnenia použitia konkrétnej služby, ktorú si účastník alebo
-								používateľ výslovne vyžiadal, alebo na jediný účel vykonania prenosu komunikácie cez
-								elektronickú komunikačnú sieť.</span>
-						</div>
-					</details>
-
-					<details class="cmplz-category cmplz-preferences">
-						<summary>
-							<span class="cmplz-category-header">
-								<span class="cmplz-category-title">Predvoľby</span>
-								<span class="cmplz-banner-checkbox">
-									<input type="checkbox" id="cmplz-preferences-optin"
-										data-category="cmplz_preferences"
-										class="cmplz-consent-checkbox cmplz-preferences" size="40" value="1" />
-									<label class="cmplz-label" for="cmplz-preferences-optin" tabindex="0"><span
-											class="screen-reader-text">Predvoľby</span></label>
-								</span>
-								<span class="cmplz-icon cmplz-open">
-									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18">
-										<path
-											d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z" />
-									</svg>
-								</span>
-							</span>
-						</summary>
-						<div class="cmplz-description">
-							<span class="cmplz-description-preferences">Technické uloženie alebo prístup je potrebný na
-								legitímny účel ukladania preferencií, ktoré si účastník alebo používateľ
-								nepožaduje.</span>
-						</div>
-					</details>
-
-					<details class="cmplz-category cmplz-statistics">
-						<summary>
-							<span class="cmplz-category-header">
-								<span class="cmplz-category-title">Štatistiky</span>
-								<span class="cmplz-banner-checkbox">
-									<input type="checkbox" id="cmplz-statistics-optin" data-category="cmplz_statistics"
-										class="cmplz-consent-checkbox cmplz-statistics" size="40" value="1" />
-									<label class="cmplz-label" for="cmplz-statistics-optin" tabindex="0"><span
-											class="screen-reader-text">Štatistiky</span></label>
-								</span>
-								<span class="cmplz-icon cmplz-open">
-									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18">
-										<path
-											d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z" />
-									</svg>
-								</span>
-							</span>
-						</summary>
-						<div class="cmplz-description">
-							<span class="cmplz-description-statistics">Technické úložisko alebo prístup, ktorý sa
-								používa výlučne na štatistické účely.</span>
-							<span class="cmplz-description-statistics-anonymous">Technické úložisko alebo prístup, ktorý
-								sa používa výlučne na anonymné štatistické účely. Bez predvolania, dobrovoľného plnenia
-								zo strany vášho poskytovateľa internetových služieb alebo dodatočných záznamov od tretej
-								strany, informácie uložené alebo získané len na tento účel sa zvyčajne nedajú použiť na
-								vašu identifikáciu.</span>
-						</div>
-					</details>
-					<details class="cmplz-category cmplz-marketing">
-						<summary>
-							<span class="cmplz-category-header">
-								<span class="cmplz-category-title">Marketing</span>
-								<span class="cmplz-banner-checkbox">
-									<input type="checkbox" id="cmplz-marketing-optin" data-category="cmplz_marketing"
-										class="cmplz-consent-checkbox cmplz-marketing" size="40" value="1" />
-									<label class="cmplz-label" for="cmplz-marketing-optin" tabindex="0"><span
-											class="screen-reader-text">Marketing</span></label>
-								</span>
-								<span class="cmplz-icon cmplz-open">
-									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18">
-										<path
-											d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z" />
-									</svg>
-								</span>
-							</span>
-						</summary>
-						<div class="cmplz-description">
-							<span class="cmplz-description-marketing">Technické úložisko alebo prístup sú potrebné na
-								vytvorenie používateľských profilov na odosielanie reklamy alebo sledovanie používateľa
-								na webovej stránke alebo na viacerých webových stránkach na podobné marketingové
-								účely.</span>
-						</div>
-					</details>
-				</div><!-- categories end -->
-			</div>
-
-			<div class="cmplz-links cmplz-information">
-				<a class="cmplz-link cmplz-manage-options cookie-statement" href="#"
-					data-relative_url="#cmplz-manage-consent-container">Spravovať možnosti</a>
-				<a class="cmplz-link cmplz-manage-third-parties cookie-statement" href="#"
-					data-relative_url="#cmplz-cookies-overview">Správa služieb</a>
-				<a class="cmplz-link cmplz-manage-vendors tcf cookie-statement" href="#"
-					data-relative_url="#cmplz-tcf-wrapper">Spravovať {vendor_count} dodávateľov</a>
-				<a class="cmplz-link cmplz-external cmplz-read-more-purposes tcf" target="_blank"
-					rel="noopener noreferrer nofollow" href="https://cookiedatabase.org/tcf/purposes/">Prečítajte si
-					viac o týchto účeloch</a>
-			</div>
-
-			<div class="cmplz-divider cmplz-footer"></div>
-
-			<div class="cmplz-buttons">
-				<button class="cmplz-btn cmplz-accept">Prijať</button>
-				<button class="cmplz-btn cmplz-deny">Odmietnúť</button>
-				<button class="cmplz-btn cmplz-view-preferences">Zobraziť predvoľby</button>
-				<button class="cmplz-btn cmplz-save-preferences">Uložiť predvoľby</button>
-				<a class="cmplz-btn cmplz-manage-options tcf cookie-statement" href="#"
-					data-relative_url="#cmplz-manage-consent-container">Zobraziť predvoľby</a>
-			</div>
-
-			<div class="cmplz-links cmplz-documents">
-				<a class="cmplz-link cookie-statement" href="#" data-relative_url="">{title}</a>
-				<a class="cmplz-link privacy-statement" href="#" data-relative_url="">{title}</a>
-				<a class="cmplz-link impressum" href="#" data-relative_url="">{title}</a>
-			</div>
-
-		</div>
-	</div>
-	<div id="cmplz-manage-consent" data-nosnippet="true"><button
-			class="cmplz-btn cmplz-hidden cmplz-manage-consent manage-consent-1">Spravovať súhlas</button>
-
-	</div>
-	<script type="text/javascript" id="cmplz-cookiebanner-js-extra">
-		/* <![CDATA[ */
-		var complianz = { "prefix": "cmplz_", "user_banner_id": "1", "set_cookies": [], "block_ajax_content": "", "banner_version": "28", "version": "7.0.4", "store_consent": "", "do_not_track_enabled": "", "consenttype": "optin", "region": "eu", "geoip": "", "dismiss_timeout": "", "disable_cookiebanner": "", "soft_cookiewall": "", "dismiss_on_scroll": "", "cookie_expiry": "365", "url": "https:\/\/www.gamca.sk\/wp-json\/complianz\/v1\/", "locale": "lang=sk&locale=sk_SK", "set_cookies_on_root": "", "cookie_domain": "", "current_policy_id": "17", "cookie_path": "\/", "categories": { "statistics": "\u0161tatistiky", "marketing": "marketing" }, "tcf_active": "", "placeholdertext": "Kliknut\u00edm prijmete s\u00fabory cookie {category} a povol\u00edte tento obsah", "css_file": "https:\/\/www.gamca.sk\/wp-content\/uploads\/complianz\/css\/banner-{banner_id}-{type}.css?v=28", "page_links": { "eu": { "cookie-statement": { "title": "Z\u00e1sady pou\u017e\u00edvania s\u00faborov cookie", "url": "https:\/\/www.gamca.sk\/zasady-pouzivania-suborov-cookie-eu\/" }, "privacy-statement": { "title": "Ochrana s\u00fakromia", "url": "https:\/\/www.gamca.sk\/ochrana-sukromia\/" } } }, "tm_categories": "", "forceEnableStats": "", "preview": "", "clean_cookies": "", "aria_label": "Kliknut\u00edm prijmete s\u00fabory cookie {category} a povol\u00edte tento obsah" };
-		/* ]]> */
-	</script>
-	<script defer type="text/javascript"
-		src="https://www.gamca.sk/wp-content/plugins/complianz-gdpr/cookiebanner/js/complianz.min.js?ver=1710275745"
-		id="cmplz-cookiebanner-js"></script>
-	<script type="text/javascript">
-		(function () {
-			var expirationDate = new Date();
-			expirationDate.setTime(expirationDate.getTime() + 31536000 * 1000);
-			document.cookie = "pll_language=sk; expires=" + expirationDate.toUTCString() + "; path=/; secure; SameSite=Lax";
-		}());
-
-	</script>
-	<script type="text/plain" data-service="google-analytics" async data-category="statistics"
-		data-cmplz-src="https://www.googletagmanager.com/gtag/js?id=UA-131133085-1"></script>
-	<!-- Statistics script Complianz GDPR/CCPA -->
-	<script type="text/plain" data-category="statistics">window['gtag_enable_tcf_support'] = false;
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'UA-131133085-1', {
-	cookie_flags:'secure;samesite=none',
-	
-});
-</script>
+	<!-- sem patri Cookies -->
 </body>
 
 </html>
