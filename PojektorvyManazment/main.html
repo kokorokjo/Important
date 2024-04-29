@@ -1649,10 +1649,31 @@
 							<div class="separator blue"></div>
 							<div class="page-content">
 								
+								<select id="roomSelect" onchange="chooseRoom()">
+									<option value="">Select a room</option>
+									<option value="room-31">31</option>
+									<option value="room-32">32</option>
+									<option value="room-33">33</option>
+									<option value="room-33A">33A</option>
+									<option value="room-33B">33B</option>
+									<option value="room-34">34</option>
+									<option value="room-35">35</option>
+									<option value="room-36">36</option>
+									<option value="room-38">38</option>
+									<option value="room-39">39</option>
+									<option value="room-40">40</option>
+									<option value="room-42">42</option>
 
-								
-									<svg height="500" width="700">
-										<image height="500" width="500" href="GamcaMapa1.png" usemap="#image-map" />
+
+									<!-- Add more options for other rooms -->
+								</select>
+								<button onclick="clearpathSVG()"> Clear</button>
+<div id="mapa"></div>
+									<svg height="1100" width="500">
+										<image height="500" width="500" href="GamcaMapa1.png" />
+										<image height="957" width="450" href="GamcaMapa2.png" />
+										<image height="1730" width="450" href="GamcaMapa3.png" />
+										
 									  
 											<circle
 											id="start"
@@ -2071,28 +2092,15 @@
 											cy="153.5"
 											r=".1"
 											/>
+											<!-- prva mapa -->
+											
+											
 
 											 
 									  
 									  </svg>
-									  <select id="roomSelect" onchange="chooseRoom()">
-										<option value="">Select a room</option>
-										<option value="room-31">31</option>
-										<option value="room-32">32</option>
-										<option value="room-33">33</option>
-										<option value="room-33A">33A</option>
-										<option value="room-33B">33B</option>
-										<option value="room-34">34</option>
-										<option value="room-35">35</option>
-										<option value="room-36">36</option>
-										<option value="room-38">38</option>
-										<option value="room-39">39</option>
-										<option value="room-40">40</option>
-										<option value="room-42">42</option>
-
-
-										<!-- Add more options for other rooms -->
-									</select>
+									  
+									
 	  								<button onclick="clearpathSVG()"> Clear</button>
 									<script>
 										var graph = new Graph();
