@@ -1676,7 +1676,7 @@
 										
 									  
 											<circle
-											id="start"
+											id="prizemie"
 											style="fill:#bb0f0f;stroke:none"
 											cx="243"
 											cy="165"
@@ -2093,6 +2093,22 @@
 											r=".1"
 											/>
 											<!-- prva mapa -->
+
+											<circle
+											id="poschodie1"
+											style="fill:#bb0f0f;stroke:none"
+											cx="247.5"
+											cy="427"
+											r="5"
+											/>
+											<!-- druha mapa -->
+											<circle
+											id="poschodie2"
+											style="fill:#bb0f0f;stroke:none"
+											cx="241"
+											cy="788"
+											r="5"
+											/>
 											
 											
 
@@ -2103,15 +2119,25 @@
 									
 	  								<button onclick="clearpathSVG()"> Clear</button>
 									<script>
+										const urlParams = new URLSearchParams(window.location.search);
+										let zaciatok = 0;
+										const myParam = urlParams.get('zaciatok');
+										if (myParam==null) {
+											zaciatok = 0;
+										}
+										else {
+											zaciatok = parseInt(myParam);
+										}
+
 										var graph = new Graph();
-										graph.addEdge("start", "hallway-33C");
-										graph.addEdge("start", "hallway-34");
-										graph.addEdge("start", "hallway-35");
-										graph.addEdge("start", "hallway-36");
-										graph.addEdge("start", "hallway-38");
-										graph.addEdge("start", "hallway-39");
-										graph.addEdge("start", "hallway-40");
-										graph.addEdge("start", "hallway-42");
+										graph.addEdge("prizemie", "hallway-33C");
+										graph.addEdge("prizemie", "hallway-34");
+										graph.addEdge("prizemie", "hallway-35");
+										graph.addEdge("prizemie", "hallway-36");
+										graph.addEdge("prizemie", "hallway-38");
+										graph.addEdge("prizemie", "hallway-39");
+										graph.addEdge("prizemie", "hallway-40");
+										graph.addEdge("prizemie", "hallway-42");
 										graph.addEdge("hallway-33C", "hallway-32");
 										graph.addEdge("hallway-33C", "hallway-31");
 										
@@ -2128,7 +2154,7 @@
 										graph.addEdge("room-33M", "room-33A");
 										graph.addEdge("room-32", "hallway-32");
 										graph.addEdge("room-31", "hallway-31");
-										var myVertices = ["start",
+										var myVertices = ["prizemie","poschodie1","poschodie2",
 										  "room-31","room-32","room-33A","room-33","room-33B","room-34","room-35","room-36","room-38","room-39","room-40","room-42",
 										  "hallway-31","hallway-32","hallway-33C","hallway-34","hallway-35","hallway-36","hallway-38","hallway-39","hallway-40","hallway-42"];
 										var myRooms =["room-31","room-32","room-33A","room-33","room-33B","room-34","room-35","room-36","room-38","room-39","room-40","room-42"] 
@@ -2164,9 +2190,11 @@
 											return this;
 										  }
 										function shortestPath(graph, target) {     
-											var source = myVertices[0];       
+											var source = myVertices[zaciatok];       
 											var queue = [ source ];
-											var visited = { "start": true };
+											var visited = { source : true };
+											console.log(source);
+											console.log(zaciatok);
 											var predecessor = {};
 											var tail = 0;
 											while (tail < queue.length) {
