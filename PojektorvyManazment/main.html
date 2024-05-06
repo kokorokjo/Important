@@ -1670,91 +1670,99 @@
 								<button onclick="clearpathSVG()"> Clear</button>
 								<div id="mapa"></div>
 									<svg height="1100" width="500">
+										<defs>
+											<marker id="circle" markerWidth="10" markerHeight="10" refX="5" refY="5">
+												<circle cx="5" cy="5" r="3" fill="blue" />
+											</marker>
+											<marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="2" orient="auto">
+												<path id="sipka" d="M 0 0 L 4 2 L 0 4 z" fill="orange" />
+											  </marker>
+										</defs>
+										
 										<image height="500" width="500" href="GamcaMapa1.png" />
 										<image height="957" width="450" href="GamcaMapa2.png" />
 										<image height="1730" width="450" href="GamcaMapa3.png" />
-										
-									  
+										<!-- <line x1="10" y1="10" x2="300" y2="200" stroke="red" stroke-width="3" marker-start="url(#circle)" marker-end="url(#arrow)" /> -->
+
+									  	<!-- prva mapa -->
 											<circle
 											id="prizemie"
 											style="fill:#bb0f0f;stroke:none"
 											cx="243"
 											cy="165"
-											r="5"
+											r=".1"
 											/>
 											<circle
 											id="prizemieL"
 											style="fill:#bb0f0f;stroke:none"
 											cx="230"
 											cy="165"
-											r="2"
+											r=".1"
 											/>
 											<circle
 											id="prizemieSchody"
 											style="fill:#0fbb0f;stroke:none"
 											cx="243"
 											cy="199"
-											r="5"
+											r=".1"
 											/>
 											<circle
 											id="prizemieSchodyL"
 											style="fill:#0fbb0f;stroke:none"
 											cx="230"
 											cy="195"
-											r="5"
+											r=".1"
 											/>
 											
-
-											<!-- pridat body na zatocie po schodoch -->
 									  		<!-- routes -->
 											<circle
 											id="room-33A"
 											style="fill:#000000;stroke:none"
 											cx="60"
 											cy="125"
-											r="5.1"
+											r=".1"
 											/>
 											<circle
 											id="room-31"
 											style="fill:#000000;stroke:none"
 											cx="80"
 											cy="256"
-											r="5.1"
+											r=".1"
 											/>
 											<circle
 											id="room-32"
 											style="fill:#000000;stroke:none"
 											cx="80"
 											cy="193"
-											r="5.1"
+											r=".1"
 											/>
 											<circle
 											id="room-33"
 											style="fill:#000000;stroke:none"
 											cx="70"
 											cy="154"
-											r="5.1"
+											r=".1"
 											/>
 											<circle
 											id="room-33M"
 											style="fill:#000000;stroke:none"
 											cx="70"
 											cy="130"
-											r="5.1"
+											r=".1"
 											/>
 											<circle
 											id="room-33B"
 											style="fill:#000000;stroke:none"
 											cx="86"
 											cy="130"
-											r="5.1"
+											r=".1"
 											/>
 											<circle
 											id="room-34"
 											style="fill:#000000;stroke:none"
 											cx="123"
 											cy="154"
-											r="5.1"
+											r=".1"
 											/>
 											<circle
 											id="room-35"
@@ -1775,7 +1783,7 @@
 											style="fill:#000000;stroke:none"
 											cx="280"
 											cy="154"
-											r=".5"
+											r=".1"
 											/>
 											<circle
 											id="room-39"
@@ -1803,14 +1811,14 @@
 											style="fill:#3bc929;stroke:none"
 											cx="70"
 											cy="256"
-											r="5.1"
+											r=".1"
 											/>
 											<circle
 											id="hallway-32"
 											style="fill:#4cdf12;stroke:none"
 											cx="70"
 											cy="193"
-											r="5.1"
+											r=".1"
 											/>
 									  
 											<circle
@@ -1874,41 +1882,40 @@
 									  
 									  
 											<!-- walls +0-->
-											<!-- 33-36 -->
 											<circle
 											id="wall-1"
 											style="fill:#b81515;stroke:none"
 											cx="201.8"
 											cy="114.5"
-											r="5.1"
+											r=".1"
 											/>
 											<circle
 											id="wall-2"
 											style="fill:#dd2121;stroke:none"
 											cx="201.8"
 											cy="153.5"
-											r="5.1"
+											r=".1"
 											/>
 											<circle
 											id="wall-3"
 											style="fill:#ca1717;stroke:none"
 											cx="221.5"
 											cy="153.5"
-											r="5.1"
+											r=".1"
 											/>
 											<circle
 											id="wall-4"
 											style="fill:#e21313;stroke:none"
 											cx="221.5"
 											cy="114.5"
-											r="5.1"
+											r=".1"
 											/>
 											<circle
 											id="wall-5"
 											style="fill:#da1414;stroke:none"
 											cx="142.5"
 											cy="114.5"
-											r="5.1"
+											r=".1"
 											/>
 											 <circle
 											id="wall-6"
@@ -1959,7 +1966,6 @@
 											cy="153.5"
 											r=".1"
 											/>
-											<!-- 33A -->
 											<circle
 											id="wall-13"
 											style="fill:#000000;stroke:none"
@@ -1988,7 +1994,6 @@
 											cy="86"
 											r=".1"
 											/>
-											<!-- 31 a 32 -->
 											<circle
 											id="wall-17"
 											style="fill:#000000;stroke:none"
@@ -2045,7 +2050,6 @@
 											cy="234"
 											r=".1"
 											/>
-											<!-- 38-42 -->
 											<circle
 											id="wall-25"
 											style="fill:#000000;stroke:none"
@@ -2116,8 +2120,8 @@
 											cy="153.5"
 											r=".1"
 											/>
-											<!-- prva mapa -->
-
+											
+										<!-- druha mapa -->
 											<circle
 											id="poschodie1"
 											style="fill:#bb0f0f;stroke:none"
@@ -2132,7 +2136,6 @@
 											cy="427"
 											r="5"
 											/>
-											<!-- implementovat -->
 											<circle
 											id="poschodie1R"
 											style="fill:#bb0f0f;stroke:none"
@@ -2140,7 +2143,6 @@
 											cy="427"
 											r="5"
 											/>
-											<!-- implementovat -->
 											<circle
 											id="poschodie1Schody0"
 											style="fill:#0fbb0f;stroke:none"
@@ -2169,6 +2171,7 @@
 											cy="457"
 											r="5"
 											/>
+
 											<!-- routes -->
 											<circle
 											id="room-29"
@@ -2310,7 +2313,6 @@
 											cy="641"
 											r="5.1"
 											/>
-											<!-- implementovat -->
 											<circle
 											id="hallway-28"
 											style="fill:#3bc929;stroke:none"
@@ -2402,20 +2404,41 @@
 											cy="630"
 											r="5.1"
 											/>
-											<!-- implementovat -->
+											
 											
 											
 
 											<!-- walls +100-->
 											<circle
 											id="wall-101"
-											style="fill:#000000;stroke:none"
-											cx="201.8"
-											cy="114.5"
-											r=".1"
+											style="fill:#9c055d;stroke:none"
+											cx="122"
+											cy="642"
+											r="5.1"
+											/>
+											<circle
+											id="wall-102"
+											style="fill:#9c055d;stroke:none"
+											cx="63"
+											cy="642"
+											r="5.1"
+											/>
+											<circle
+											id="wall-103"
+											style="fill:#9c055d;stroke:none"
+											cx="63"
+											cy="666"
+											r="5.1"
+											/>
+											<circle
+											id="wall-104"
+											style="fill:#9c055d;stroke:none"
+											cx="122"
+											cy="666"
+											r="5.1"
 											/>
 											
-											<!-- druha mapa -->
+											<!-- tretia mapa -->
 											<circle
 											id="poschodie2"
 											style="fill:#bb0f0f;stroke:none"
@@ -2451,29 +2474,26 @@
 											<circle
 											id="room-15"
 											style="fill:#000000;stroke:none"
-											cx="60"
-											cy="125"
+											cx="404"
+											cy="797.5"
 											r="5.1"
 											/>
 											<!-- walls +200-->
 											<circle
 											id="wall-201"
-											style="fill:#000000;stroke:none"
-											cx="201.8"
-											cy="114.5"
-											r=".1"
+											style="fill:#64014b;stroke:none"
+											cx="114.8"
+											cy="1005"
+											r="5.1"
 											/>
 
-											
-											
-
-											 
-									  
+																																	 									  
 									  </svg>
 									  
 									
 	  								<button onclick="clearpathSVG()"> Clear</button>
 									<script>
+										//url params
 										const urlParams = new URLSearchParams(window.location.search);
 										let zaciatok = 0;
 										const myParam = urlParams.get('zaciatok');
@@ -2483,14 +2503,17 @@
 										else {
 											zaciatok = parseInt(myParam);
 										}
-
+									</script>
+									<script>
+										//vystavany graf
 										var graph = new Graph();
+
+										//tu su poschodia pospajane
 										graph.addEdge("prizemie", "prizemieL");
 										graph.addEdge("prizemieL", "prizemieSchodyL")
 										graph.addEdge("prizemieSchodyL", "prizemieSchody");
 										//iba hore(prizemie)
 										graph.addEdge("prizemieSchody", "poschodie1Schody0");
-
 
 										graph.addEdge("poschodie1Schody0","poschodie1SchodyR");
 										graph.addEdge("poschodie1SchodyR","poschodie1R");
@@ -2501,23 +2524,13 @@
 										//hore aj dole (1. poschodie)
 										graph.addEdge("poschodie1Schody2","poschodie2Schody");
 
-
 										graph.addEdge("poschodie2", "poschodie2R");
 										graph.addEdge("poschodie2R", "poschodie2SchodyR");
 										graph.addEdge("poschodie2SchodyR","poschodie2Schody");
 										//iba dole (2.poschodie)
-
-
-
+								
 										
-
-
-
-										
-
-										
-
-										//tu je prizemie pospajane
+										//tu je chodba pospajana
 										graph.addEdge("prizemie", "hallway-33C");
 										graph.addEdge("prizemie", "hallway-34");
 										graph.addEdge("prizemie", "hallway-35");
@@ -2536,8 +2549,39 @@
 										graph.addEdge("prizemieL", "hallway-42");
 										graph.addEdge("hallway-33C", "hallway-32");
 										graph.addEdge("hallway-33C", "hallway-31");
-										//pospajana chodba
-										
+										//prizemie
+										graph.addEdge("poschodie1", "hallway-28");
+										graph.addEdge("poschodie1", "hallway-27");
+										graph.addEdge("poschodie1", "hallway-26");
+										graph.addEdge("poschodie1", "hallway-25");
+										graph.addEdge("poschodie1", "hallway-24");
+										graph.addEdge("poschodie1", "hallway-23");
+										graph.addEdge("poschodie1", "hallway-22");
+										graph.addEdge("poschodie1", "hallway-21");
+										graph.addEdge("poschodie1L", "hallway-28");
+										graph.addEdge("poschodie1L", "hallway-27");
+										graph.addEdge("poschodie1L", "hallway-26");
+										graph.addEdge("poschodie1L", "hallway-25");
+										graph.addEdge("poschodie1L", "hallway-24");
+										graph.addEdge("poschodie1L", "hallway-23");
+										graph.addEdge("poschodie1L", "hallway-22");
+										graph.addEdge("poschodie1L", "hallway-21");
+										graph.addEdge("poschoide1R", "hallway-28");
+										graph.addEdge("poschoide1R", "hallway-27");
+										graph.addEdge("poschoide1R", "hallway-26");
+										graph.addEdge("poschoide1R", "hallway-25");
+										graph.addEdge("poschoide1R", "hallway-24");
+										graph.addEdge("poschoide1R", "hallway-23");
+										graph.addEdge("poschoide1R", "hallway-22");
+										graph.addEdge("poschoide1R", "hallway-21");
+										graph.addEdge("hallway-21", "hallway-20");
+										graph.addEdge("hallway-21", "hallway-19");
+										graph.addEdge("hallway-21", "hallway-18");
+										graph.addEdge("hallway-21", "hallway-17A");
+										graph.addEdge("hallway-21", "hallway-17");
+										//prve poschodie
+
+										//tu je chodba a izby pospajane
 										graph.addEdge("hallway-42", "room-42");
 										graph.addEdge("hallway-40", "room-40");
 										graph.addEdge("hallway-39", "room-39");
@@ -2551,14 +2595,41 @@
 										graph.addEdge("room-33M", "room-33A");
 										graph.addEdge("room-32", "hallway-32");
 										graph.addEdge("room-31", "hallway-31");
-										//pospajane izby s chodbou
+										//prve poschodie
+										graph.addEdge("hallway-17", "room-17");
+										graph.addEdge("hallway-17A", "room-17A");
+										graph.addEdge("hallway-18", "room-18");
+										graph.addEdge("hallway-19", "room-19");
+										graph.addEdge("hallway-20", "room-20");
+										graph.addEdge("hallway-21", "room-21");
+										graph.addEdge("hallway-22", "room-22");
+										graph.addEdge("hallway-23", "room-23");
+										graph.addEdge("hallway-24", "room-24");
+										graph.addEdge("hallway-25", "room-25");
+										graph.addEdge("hallway-26", "room-26");
+										graph.addEdge("hallway-27", "room-27");
+										graph.addEdge("hallway-28", "room-28");
+										graph.addEdge("hallway-28", "room-29");
+										graph.addEdge("hallway-17", "room-17M");
+										graph.addEdge("hallway-21", "room-21M");
+										graph.addEdge("hallway-27", "room-27M");
+										graph.addEdge("room-17M", "room-16");
+										graph.addEdge("room-21M", "room-21A");
+										graph.addEdge("room-27M", "room-27A");
+										//druhe poschodie
+
 
 										var myVertices = ["prizemie","poschodie1","poschodie2", "prizemieL", "prizemieSchodyL", "prizemieSchody","poschodie1Schody0",
 											"poschodie1SchodyR", "poschodie1R","poschodie1","poschodie1L","poschodie1SchodyL","poschodie1Schody2","poschodie2Schody",
 											"poschodie2R","poschodie2SchodyR", "poschodie2Schody",
 										  	"room-31","room-32","room-33A","room-33","room-33B","room-34","room-35","room-36","room-38","room-39","room-40","room-42",
-										  	"hallway-31","hallway-32","hallway-33C","hallway-34","hallway-35","hallway-36","hallway-38","hallway-39","hallway-40","hallway-42"];
-										var myRooms =["room-31","room-32","room-33A","room-33","room-33B","room-34","room-35","room-36","room-38","room-39","room-40","room-42"] 
+											"room-16","room-17M","room-17","room-17A","room-18","room-19","room-20","room-21A","room-21M","room-21","room-22","room-23","room-24","room-25","room-26","room-27A","room-27M","room-27","room-28","room-29",
+										  	"hallway-31","hallway-32","hallway-33C","hallway-34","hallway-35","hallway-36","hallway-38","hallway-39","hallway-40","hallway-42",
+											"hallway-17","hallway-17A","hallway-18","hallway-19","hallway-20","hallway-21","hallway-22","hallway-23","hallway-24","hallway-25","hallway-26","hallway-27","hallway-28"
+										];
+										var myRooms =["room-31","room-32","room-33A","room-33","room-33B","room-34","room-35","room-36","room-38","room-39","room-40","room-42",
+											"room-16"
+										] 
 										var cordsOfRoom = {
 											"room-42": ["wall-34", "wall-32", "wall-31", "wall-33"],
 											"room-40": ["wall-32", "wall-31", "wall-29", "wall-30"],
@@ -2571,9 +2642,12 @@
 											"room-33A":["wall-16", "wall-14", "wall-13", "wall-15"],
 											"room-33": ["wall-12", "wall-11", "wall-10", "wall-9"],
 											"room-32": ["wall-17", "wall-18", "wall-20", "wall-19"],
-											"room-31": ["wall-21", "wall-22", "wall-23", "wall-24"]}
+											"room-31": ["wall-21", "wall-22", "wall-23", "wall-24"],
+											"room-16": ["wall-101", "wall-102", "wall-103", "wall-104"],
+										}
 										
 										
+										//logika
 										function Graph() {
 											var neighbors = this.neighbors = {}; 
 										  
@@ -2595,7 +2669,8 @@
 											};
 										  
 											return this;
-										  }
+										  }//funkcia grafu
+										
 										function shortestPath(graph, target) {     
 											var source = myVertices[zaciatok];       
 											var queue = [ source ];
@@ -2627,7 +2702,8 @@
 												queue.push(v);
 											  }
 											}
-										  }
+										  }//najde najkratsiu cestu v grafe
+
 										  function miestonsti(){ 
 											var svg = document.querySelector('svg');
 											for(var i=0;i<myRooms.length;i++){
@@ -2647,7 +2723,7 @@
 												path.setAttribute('onclick', `connectCircles('${myRooms[i]}')`);
 												svg.appendChild(path);
 											}											
-										  }
+										  }//on click na miestnosti
 
 										  function highlightRoom(room){
 											var svg = document.querySelector('svg');
@@ -2671,14 +2747,14 @@
 											path.setAttribute('stroke', 'red');
 											svg.appendChild(path);
 											
-											}
+											}//zvyrazni miestnost
+
 											function highlightStairs(stair){
 												//zatocene schody resp sipky
 												//iba trochu zasahuje do schodov
 
-											}
+											}//zvyrazni schody mozno netreba
 										  
-
 										  function connectCircles(target) {
 											clearpathSVG();
 											highlightRoom(target);
@@ -2699,33 +2775,44 @@
 											  path.setAttribute('id', 'cesta');
 											  path.setAttribute('fill', 'none');
 											  path.setAttribute('stroke', 'green');
+											  path.setAttribute('stroke-width', '3'); 
+
+											  if(way[i]=="prizemieL"||way[i]=="prizemieSchodyL"||
+											  way[i]=="poschodie1R"||way[i]=="poschodie1SchodyR"||way[i]=="poschodie1L"||way[i]=="poschodie1SchodyL"||
+											  way[i]=="poschodie2R"||way[i]=="poschodie2SchodyR"){
+												if(way[i+1]=="prizemieL"||way[i+1]=="prizemieSchodyL"||
+											  way[i+1]=="poschodie1R"||way[i+1]=="poschodie1SchodyR"||way[i+1]=="poschodie1L"||way[i+1]=="poschodie1SchodyL"||
+											  way[i+1]=="poschodie2R"||way[i+1]=="poschodie2SchodyR"){
+													path.setAttribute('marker-end', 'url(#arrow)');
+												}
+											  }//prida marker iba ak idem cez schody
+
 											  if(way[i]=="prizemieSchody"||way[i]=="poschodie1Schody0"||way[i]=="poschodie1Schody2"||way[i]=="poschodie2Schody"){
 												if(way[i+1]=="prizemieSchody"||way[i+1]=="poschodie1Schody0"||way[i+1]=="poschodie1Schody2"||way[i+1]=="poschodie2Schody"){
 													path.setAttribute('stroke', 'none');
 													var stair = document.getElementById(way[i]);
 													var stair2 = document.getElementById(way[i+1]);
 													highlightStairs(stair);
-													highlightStairs(stair2);
-									
-
+													highlightStairs(stair2);									
 												}
-											  }      
-											  path.setAttribute('stroke-width', '3'); 
+											  }//ak ide cez poschodie nespaja cesty
+											  
 											  svg.appendChild(path);
-											}
-										  
+											}										  
 										  }
-										  
-										 
+										  										 
 										  function clearpathSVG() {
 											var svg = document.querySelector('svg');
 											var paths = document.querySelectorAll('path');
 											var k = paths.length;
 											for (var i = 0; i < k; i++) {
+												if(paths[i].id=="sipka"){
+													continue;
+												}
 											  svg.removeChild(paths[i]);
 											}
 											miestonsti();
-										  }
+										  }//vymaze cestu
 
 										  var dict ={
 											"room-31":"1.A",
@@ -2740,30 +2827,16 @@
 											"room-39":"8.A",
 											"room-40":"9.A",
 											"room-42":"10.A",
-
-										  }
+										  }//nazvy miestnosti
 										  
 										  function chooseRoom() {
 											var room = document.getElementById("roomSelect").value;
 											connectCircles(room);
+										  }//ziska miestnost z selectu
 
-
-										  }
-										// highlightRoom();
-										miestonsti();
-										
-										
-										
-										
+										miestonsti();																																								
 										</script>
-									
-								
-
-								
-
-									
-									
-
+																																											
 								<div class="page-note">
 									<div class="separator orange"></div>
 								</div>
