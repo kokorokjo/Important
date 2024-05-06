@@ -1668,7 +1668,7 @@
 									<!-- Add more options for other rooms -->
 								</select>
 								<button onclick="clearpathSVG()"> Clear</button>
-<div id="mapa"></div>
+								<div id="mapa"></div>
 									<svg height="1100" width="500">
 										<image height="500" width="500" href="GamcaMapa1.png" />
 										<image height="957" width="450" href="GamcaMapa2.png" />
@@ -1689,13 +1689,6 @@
 											cy="165"
 											r="2"
 											/>
-											<!-- <circle
-											id="prizemieR"
-											style="fill:#bb0f0f;stroke:none"
-											cx="256"
-											cy="165"
-											r="2"
-											/> -->
 											<circle
 											id="prizemieSchody"
 											style="fill:#0fbb0f;stroke:none"
@@ -1707,19 +1700,13 @@
 											id="prizemieSchodyL"
 											style="fill:#0fbb0f;stroke:none"
 											cx="230"
-											cy="175"
+											cy="195"
 											r="5"
 											/>
-											<!-- <circle
-											id="prizemieSchodyR"
-											style="fill:#0fbb0f;stroke:none"
-											cx="256"
-											cy="175"
-											r="5"
-											/> -->
+											
 
 											<!-- pridat body na zatocie po schodoch -->
-									  <!-- routes -->
+									  		<!-- routes -->
 											<circle
 											id="room-33A"
 											style="fill:#000000;stroke:none"
@@ -2155,8 +2142,15 @@
 											/>
 											<!-- implementovat -->
 											<circle
-											id="poschodie1Schody"
+											id="poschodie1Schody0"
 											style="fill:#0fbb0f;stroke:none"
+											cx="247.5"
+											cy="462"
+											r="5"
+											/>
+											<circle
+											id="poschodie1Schody2"
+											style="fill:#0fbb5c;stroke:none"
 											cx="247.5"
 											cy="462"
 											r="5"
@@ -2165,14 +2159,14 @@
 											id="poschodie1SchodyL"
 											style="fill:#0fbb0f;stroke:none"
 											cx="234"
-											cy="437"
+											cy="457"
 											r="5"
 											/>
 											<circle
 											id="poschodie1SchodyR"
 											style="fill:#0fbb0f;stroke:none"
 											cx="261"
-											cy="437"
+											cy="457"
 											r="5"
 											/>
 											<!-- routes -->
@@ -2429,13 +2423,6 @@
 											cy="788"
 											r="5"
 											/>
-											<!-- <circle
-											id="poschodie2L"
-											style="fill:#bb0f0f;stroke:none"
-											cx="227"
-											cy="788"
-											r="5"
-											/> -->
 											<!-- implementovat -->
 											<circle
 											id="poschodie2R"
@@ -2452,18 +2439,12 @@
 											cy="828"
 											r="5"
 											/>
-											<circle
-											id="poschodie2SchodyL"
-											style="fill:#0fbb0f;stroke:none"
-											cx="229"
-											cy="800"
-											r="5"
-											/>
+											
 											<circle
 											id="poschodie2SchodyR"
 											style="fill:#0fbb0f;stroke:none"
 											cx="254"
-											cy="800"
+											cy="820"
 											r="5"
 											/>
 											<!-- routes -->
@@ -2507,34 +2488,36 @@
 										graph.addEdge("prizemie", "prizemieL");
 										graph.addEdge("prizemieL", "prizemieSchodyL")
 										graph.addEdge("prizemieSchodyL", "prizemieSchody");
-										// graph.addEdge("prizemieSchody", "prizemieSchodyR");
-										//iba hore
+										//iba hore(prizemie)
+										graph.addEdge("prizemieSchody", "poschodie1Schody0");
 
-										graph.addEdge("poschodie1", "poschodie1L")
-										graph.addEdge("poschodie1R", "poschodie1L");
-										graph.addEdge("poschodie1R", "poschodie1");
-										graph.addEdge("poschodie1L", "poschodie1SchodyL");
-										graph.addEdge("poschodie1SchodyL","poschodie1Schody");
-										graph.addEdge("poschodie1Schody","poschodie1SchodyR");
+
+										graph.addEdge("poschodie1Schody0","poschodie1SchodyR");
+										graph.addEdge("poschodie1SchodyR","poschodie1R");
+										graph.addEdge("poschodie1R","poschodie1");
+										graph.addEdge("poschodie1","poschodie1L");
+										graph.addEdge("poschodie1L","poschodie1SchodyL");
+										graph.addEdge("poschodie1SchodyL","poschodie1Schody2");
+										//hore aj dole (1. poschodie)
+										graph.addEdge("poschodie1Schody2","poschodie2Schody");
+
 
 										graph.addEdge("poschodie2", "poschodie2R");
 										graph.addEdge("poschodie2R", "poschodie2SchodyR");
 										graph.addEdge("poschodie2SchodyR","poschodie2Schody");
-										graph.addEdge("poschodie2Schody","poschodie2SchodyL");
-										//iba dole
+										//iba dole (2.poschodie)
 
 
-										graph.addEdge("prizemieSchody", "poschodie1SchodyR");
-										graph.addEdge("poschodie1SchodyR", "poschodie2R")
 
-										graph.addEdge("poschodie1", "poschodie1R");
-										graph.addEdge("poschodie1", "poschodie1L");
-										graph.addEdge("poschodie2", "poschodie2Schody");
-
-										graph.addEdge("prizemieSchody", "poschodie1Schody");
-										graph.addEdge("poschodie1Schody", "poschodie2Schody");
+										
 
 
+
+										
+
+										
+
+										//tu je prizemie pospajane
 										graph.addEdge("prizemie", "hallway-33C");
 										graph.addEdge("prizemie", "hallway-34");
 										graph.addEdge("prizemie", "hallway-35");
@@ -2553,6 +2536,7 @@
 										graph.addEdge("prizemieL", "hallway-42");
 										graph.addEdge("hallway-33C", "hallway-32");
 										graph.addEdge("hallway-33C", "hallway-31");
+										//pospajana chodba
 										
 										graph.addEdge("hallway-42", "room-42");
 										graph.addEdge("hallway-40", "room-40");
@@ -2567,11 +2551,15 @@
 										graph.addEdge("room-33M", "room-33A");
 										graph.addEdge("room-32", "hallway-32");
 										graph.addEdge("room-31", "hallway-31");
-										var myVertices = ["prizemie","poschodie1","poschodie2", "prizemieSchody","poschodie1Schody","poschodie2Schody",
-										  "room-31","room-32","room-33A","room-33","room-33B","room-34","room-35","room-36","room-38","room-39","room-40","room-42",
-										  "hallway-31","hallway-32","hallway-33C","hallway-34","hallway-35","hallway-36","hallway-38","hallway-39","hallway-40","hallway-42"];
+										//pospajane izby s chodbou
+
+										var myVertices = ["prizemie","poschodie1","poschodie2", "prizemieL", "prizemieSchodyL", "prizemieSchody","poschodie1Schody0",
+											"poschodie1SchodyR", "poschodie1R","poschodie1","poschodie1L","poschodie1SchodyL","poschodie1Schody2","poschodie2Schody",
+											"poschodie2R","poschodie2SchodyR", "poschodie2Schody",
+										  	"room-31","room-32","room-33A","room-33","room-33B","room-34","room-35","room-36","room-38","room-39","room-40","room-42",
+										  	"hallway-31","hallway-32","hallway-33C","hallway-34","hallway-35","hallway-36","hallway-38","hallway-39","hallway-40","hallway-42"];
 										var myRooms =["room-31","room-32","room-33A","room-33","room-33B","room-34","room-35","room-36","room-38","room-39","room-40","room-42"] 
-										  var cordsOfRoom = {
+										var cordsOfRoom = {
 											"room-42": ["wall-34", "wall-32", "wall-31", "wall-33"],
 											"room-40": ["wall-32", "wall-31", "wall-29", "wall-30"],
 											"room-39": ["wall-30", "wall-29", "wall-27", "wall-28"],
@@ -2711,17 +2699,17 @@
 											  path.setAttribute('id', 'cesta');
 											  path.setAttribute('fill', 'none');
 											  path.setAttribute('stroke', 'green');
-											//   if(way[i]=="prizemieSchody"||way[i]=="poschodie1Schody"||way[i]=="poschodie2Schody"){
-											// 	if(way[i+1]=="prizemieSchody"||way[i+1]=="poschodie1Schody"||way[i+1]=="poschodie2Schody"){
-											// 		path.setAttribute('stroke', 'black');
-											// 		var stair = document.getElementById(way[i]);
-											// 		var stair2 = document.getElementById(way[i+1]);
-											// 		highlightStairs(stair);
-											// 		highlightStairs(stair2);
+											  if(way[i]=="prizemieSchody"||way[i]=="poschodie1Schody0"||way[i]=="poschodie1Schody2"||way[i]=="poschodie2Schody"){
+												if(way[i+1]=="prizemieSchody"||way[i+1]=="poschodie1Schody0"||way[i+1]=="poschodie1Schody2"||way[i+1]=="poschodie2Schody"){
+													path.setAttribute('stroke', 'none');
+													var stair = document.getElementById(way[i]);
+													var stair2 = document.getElementById(way[i+1]);
+													highlightStairs(stair);
+													highlightStairs(stair2);
 									
 
-											// 	}
-											//   }      
+												}
+											  }      
 											  path.setAttribute('stroke-width', '3'); 
 											  svg.appendChild(path);
 											}
