@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>squad.png</file>
+        <file>section.png</file>
+        <file>division.png</file>
+        <file>main.qml</file>
+    </qresource>
+</RCC>
